@@ -1,7 +1,9 @@
 set fish_greeting
 
+fish_add_path ~/.local/bin
+
 # opam configuration
-source /home/nyanmaths/.opam/opam-init/init.fish > /dev/null 2> /dev/null; or true
+source ~/.opam/opam-init/init.fish > /dev/null 2> /dev/null; or true
 
 
 function fish_prompt
