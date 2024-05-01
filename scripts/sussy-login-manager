@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+#sleep 2  # bruh
+dbus-run-session Hyprland

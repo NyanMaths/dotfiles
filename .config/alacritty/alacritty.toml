@@ -1,0 +1,24 @@
+import = ["~/.config/alacritty/catppuccin-mocha.toml"]
+
+[font]
+size = 11.0
+
+[font.bold]
+family = "DejaVu Sans Mono"
+style = "Bold"
+
+[font.bold_italic]
+family = "DejaVu Sans Mono"
+style = "Bold Italic"
+
+[font.italic]
+family = "DejaVu Sans Mono"
+style = "Italic"
+
+[font.normal]
+family = "DejaVu Sans Mono"
+style = "Regular"
+
+[env]
+TERM = "xterm-256color"
+
