@@ -15,7 +15,7 @@ Almost required software :
   - [xdg-desktop-portal-gtk](https://github.com/flatpak/xdg-desktop-portal-gtk) : portal for file picker
 
 Status bar :
-  - [waybar](https://github.com/Alexays/Waybar) : well, yes
+  - [waybar](https://github.com/Alexays/Waybar) : wabar :)
   - [blueman](https://github.com/blueman-project/blueman)
   - [network-manager-applet](https://gitlab.gnome.org/GNOME/network-manager-applet)
 
