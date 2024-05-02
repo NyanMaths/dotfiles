@@ -2,31 +2,33 @@
 Behold, my dynamic Hyprland rice !
 
 Almost required software :
-  - rofi-lbonn-wayland(AUR) : app launcher
-  - hyprlock : stylish lock screen
-  - hyprpaper : yes
-  - hypridle : for good sleep and lock behaviours (possibly broken)
-  - wl-clip-persist(AUR) : finally a decent clipboard manager
-  - mako : notifications daemon
-  - brightnessctl : brightness control
-  - playerctl : media player control
-  - python-pywal : automatic colours for Hyprland
+  - [rofi-wayland](https://github.com/lbonn/rofi) : app launcher
+  - [hyprlock](https://github.com/hyprwm/hyprlock) : stylish lock screen
+  - [hyprpaper](https://github.com/hyprwm/hyprpaper) : yes
+  - [hypridle](https://github.com/hyprwm/hypridle) : for good sleep and lock behaviours (possibly broken)
+  - [wl-clip-persist](https://github.com/Linus789/wl-clip-persist)<sup>AUR</sup> : finally a decent clipboard manager
+  - [mako](https://github.com/emersion/mako) : notifications daemon
+  - [brightnessctl](https://github.com/Hummer12007/brightnessctl) : brightness control
+  - [playerctl](https://github.com/altdesktop/playerctl) : media player control
+  - [python-pywal](https://github.com/dylanaraps/pywal) : automatic colours for Hyprland (archived, as neofetch... shiet)
+  - [xdg-desktop-portal-hyprland](https://github.com/hyprwm/xdg-desktop-portal-hyprland) : portal for screensharing
+  - [xdg-desktop-portal-gtk](https://github.com/flatpak/xdg-desktop-portal-gtk) : portal for file picker
 
 Status bar :
-  - waybar : well, yes
-  - blueman
-  - network-manager-applet
+  - [waybar](https://github.com/Alexays/Waybar) : well, yes
+  - [blueman](https://github.com/blueman-project/blueman)
+  - [network-manager-applet](https://gitlab.gnome.org/GNOME/network-manager-applet)
 
 Optional software :
-  - greetd : a minimalistic login manager
-  - alacritty : terminal emulator
-  - nautilus : file manager
-  - vesktop : best wayland discord client so far, but breaks ToS
-  - btop & resources : TUI & GUI system monitors
-  - flameshot-git(AUR) : a really good screenshot utility, official package currently wayland-broken for me though
+  - [greetd](https://github.com/kennylevinsen/greetd) : a minimalistic login manager
+  - [alacritty](https://github.com/alacritty/alacritty) : terminal emulator
+  - [nautilus](https://gitlab.gnome.org/GNOME/nautilus) : file manager
+  - [vesktop](https://github.com/Vencord/Vesktop) : best wayland discord client so far, but breaks ToS
+  - [btop](https://github.com/aristocratos/btop) & [resources](https://github.com/nokyan/resources) : TUI & GUI system monitors
+  - [flameshot-git](https://github.com/flameshot-org/flameshot)<sup>AUR</sup> : a really good screenshot utility, official package currently wayland-broken for me though
 
 
-You should use autologin feature from your login manager as Hyprland will lock your session automatically on startup because hyprlock is classier than any login manager's config known to me.
+You should use autologin feature from your login manager as my config will lock your session automatically on startup because hyprlock is classier than any login manager's config known to me.
 In that case,do not forget to automatically launch ```dbus-run-session Hyprland``` and not just ```Hyprland```, otherwise some things will beak, especially screenshare.
 Edit ```/etc/greetd/config.toml``` :
 ```
