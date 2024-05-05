@@ -25,7 +25,7 @@ Optional software :
   - [nautilus](https://gitlab.gnome.org/GNOME/nautilus) : file manager
   - [vesktop](https://github.com/Vencord/Vesktop) : best wayland discord client so far, but breaks ToS
   - [btop](https://github.com/aristocratos/btop) & [resources](https://github.com/nokyan/resources) : TUI & GUI system monitors
-  - [flameshot-git](https://github.com/flameshot-org/flameshot)<sup>AUR</sup> : a really good screenshot utility, official package currently wayland-broken for me though
+  - [grimblast-git](https://github.com/hyprwm/contrib)<sup>AUR</sup> : a really good screenshot utility for Hyprland
 
 
 You should use autologin feature from your login manager as my config will lock your session automatically on startup because hyprlock is classier than any login manager's config known to me.
