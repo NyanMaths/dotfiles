@@ -1,5 +1,11 @@
 # dotfiles
 Behold, my dynamic Hyprland rice !
+![image](https://github.com/NyanMaths/dotfiles/assets/64662422/bafb69f7-c0c9-4d9c-8265-24887a87c67f)
+Rofi theme :
+![image](https://github.com/NyanMaths/dotfiles/assets/64662422/5194d642-b51a-47a6-8d6f-b13a3b7c1344)
+Wlogout theme :
+![image](https://github.com/NyanMaths/dotfiles/assets/64662422/aaa2aa21-5b5d-4d18-aa34-f16af59273e4)
+
 
 Almost required software :
   - [rofi-wayland](https://github.com/lbonn/rofi) : app launcher
