@@ -46,8 +46,13 @@ command = "dbus-run-session Hyprland"
 user = "USERNAME"
 
 [default_session]
-command = "agreety --cmd /bin/TERMINAL"
+command = "agreety --cmd/bin/TERMINAL"
 user = "greeter"
+
+# it can restart Hyprland automatically if you just want to reload it when logging out, in that case use this one :
+#[default_session]
+#command = "dbus-run-session Hyprland"
+#user = "USERNAME"
 ```
 
 You shall run set-wallpaper once in order to get your dynamic rice accordingly. Before first launch of this script, your colours will be defaults and there will be no wallpaper. Just .local/bin/set-wallpaper /your/wallpaper/path.png.
