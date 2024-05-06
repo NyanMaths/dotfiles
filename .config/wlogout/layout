@@ -15,12 +15,12 @@
 }
 {
     "label" : "suspend",
-    "action" : "hyprlock && systemctl suspend",
+    "action" : "~/.config/hypr/scripts/session/sleep.sh",
     "text" : "Suspend"
 }
 {
     "label" : "hibernate",
-    "action" : "hyprlock && systemctl hibernate",
+    "action" : "~/.config/hypr/scripts/session/hibernate.sh",
     "text" : "Hibernate"
 }
 {
