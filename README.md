@@ -11,12 +11,11 @@ Almost required software :
   - [rofi-wayland](https://github.com/lbonn/rofi) : app launcher
   - [hyprlock](https://github.com/hyprwm/hyprlock) : stylish lock screen
   - [hyprpaper](https://github.com/hyprwm/hyprpaper) : yes
-  - [hypridle](https://github.com/hyprwm/hypridle) : for good sleep and lock behaviours (possibly broken)
   - [wl-clip-persist](https://github.com/Linus789/wl-clip-persist)<sup>AUR</sup> : finally a decent clipboard manager
   - [mako](https://github.com/emersion/mako) : notifications daemon
   - [brightnessctl](https://github.com/Hummer12007/brightnessctl) : brightness control
   - [playerctl](https://github.com/altdesktop/playerctl) : media player control
-  - [python-pywal](https://github.com/dylanaraps/pywal) : automatic colours for Hyprland (archived, as neofetch... shiet)
+  - [python-pywal](https://github.com/dylanaraps/pywal) : automatic colours for Hyprland (archived, as neofetch...shiet)
   - [xdg-desktop-portal-hyprland](https://github.com/hyprwm/xdg-desktop-portal-hyprland) : portal for screensharing
   - [xdg-desktop-portal-gtk](https://github.com/flatpak/xdg-desktop-portal-gtk) : portal for file picker
 
