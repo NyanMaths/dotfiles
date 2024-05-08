@@ -60,7 +60,9 @@ user = "greeter"
 ```
 <h2>Rice</h2>
 
-You shall run set-wallpaper once in order to get your dynamic rice accordingly. Before first launch of this script, your colours will be defaults and there will be no wallpaper. Just .local/bin/set-wallpaper /your/wallpaper/path.png.
+Please replace eDP-1 with your monitor's name from ```hyprctl monitors``` in ```.config/hypr/hyprpaper.conf```, thanks to a bug of Hyprland which prevents IPC from well-behaving for now.
+You shall run set-wallpaper once in order to get your dynamic rice accordingly.
+Before first launch of this script, your colours will be defaults and there will be no wallpaper. Just ```~/.local/bin/set-wallpaper /your/wallpaper/path.png```.
 Yeah, only PNG codec is supported by hyprlock at the moment, so forget about WEBP and JPG. Just pray for animated wallpaper support for now.
 
 <h2>Functionalities</h2>
