@@ -18,6 +18,7 @@ Almost required software :
   - [python-pywal](https://github.com/dylanaraps/pywal) : automatic colours for Hyprland (archived, as neofetch...shiet)
   - [xdg-desktop-portal-hyprland](https://github.com/hyprwm/xdg-desktop-portal-hyprland) : portal for screensharing
   - [xdg-desktop-portal-gtk](https://github.com/flatpak/xdg-desktop-portal-gtk) : portal for file picker
+  - [gawk](https://git.savannah.gnu.org/cgit/gawk.git) : arithmetics for VRAM usage query
 
 Status bar :
   - [waybar](https://github.com/Alexays/Waybar) : wabar :)
@@ -73,8 +74,8 @@ That is why you should ```hyprctl devices```, look for your integrated devices n
 
 I set up hardware acceleration with nvidia but disabled rendering though it, because my monitor is not wired to my dGPU, so you might want to tweak these settings, in that case, get to ![the Hyprland wiki](https://wiki.hyprland.org/Nvidia) for setting up this despicable thing.
 I left a config file for this, but be careful as I do not update it often : ```.config/hypr/nyavidia.conf```
-For people who does not have nvidia-smi, wabar should have a hard-angled part in the left : this is because the GPU temperature section cannot be displayed.
-Well, just round the previous corner in ```.config/waybar/config.jsonc``` to make it look pretty again.
+For people who does not have nvidia-smi, wabar should have missing parts : this is because the GPU temperature section cannot be displayed.
+Well, just remove ```custom-gpu``` and ```custom-vram``` modules and round corners in ```.config/waybar/``` to make it look pretty again.
 
 <h3>Turbo boost toggle</h3>
 
