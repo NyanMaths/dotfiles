@@ -1,6 +1,6 @@
 {
     "label" : "lock",
-    "action" : "loginctl lock-session",
+    "action" : "~/.local/bin/session/lock.sh",
     "text" : "Lock"
 }
 {
@@ -15,12 +15,12 @@
 }
 {
     "label" : "suspend",
-    "action" : "~/.config/hypr/scripts/session/sleep.sh",
+    "action" : "~/.local/bin/session/sleep.sh",
     "text" : "Suspend"
 }
 {
     "label" : "hibernate",
-    "action" : "~/.config/hypr/scripts/session/hibernate.sh",
+    "action" : "~/.local/bin/session/hibernate.sh",
     "text" : "Hibernate"
 }
 {

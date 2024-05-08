@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
-hyprlock &
+pidof hyprlock || hyprlock &
 systemctl hibernate
