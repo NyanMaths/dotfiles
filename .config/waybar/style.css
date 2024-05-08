@@ -22,17 +22,17 @@
 
 *
 {
-  border: none;
-  border-radius: 0px;
-  font-family: "CaskaydiaCove Nerd Font", monospace;
-  font-size: 13px;
-  min-height: 0px;
+	border: none;
+	border-radius: 0px;
+	font-family: "CaskaydiaCove Nerd Font", monospace;
+	font-size: 13px;
+	min-height: 0px;
 }
 
 #waybar
 {
-  background: transparent;
-  color: @text;
+	background: transparent;
+	color: @text;
 }
 
 
@@ -57,13 +57,13 @@
 #custom-vram,
 #custom-boost
 {
-  background-color: @surface0;
-  color: @yellow;
-  border-radius: 16px;
-  padding: 0.5rem 1rem;
-  box-shadow: rgba(0, 0, 0, 0.116) 2px 2px 5px 2px;
-  margin-top: 3px;
-  margin-bottom: 2px;
+	background-color: @surface0;
+	color: @yellow;
+	border-radius: 16px;
+	padding: 0.5rem 1rem;
+	box-shadow: rgba(0, 0, 0, 0.116) 2px 2px 5px 2px;
+	margin-top: 3px;
+	margin-bottom: 2px;
 }
 
 
@@ -73,10 +73,10 @@
 
 #custom-launcher
 {
-  color: @green;
-  padding-left: 13px;
-  padding-right: 13px;
-  margin-right: 10px;
+	color: @green;
+	padding-left: 13px;
+	padding-right: 13px;
+	margin-right: 10px;
 }
 
 
@@ -86,36 +86,36 @@
 
 #memory
 {
-  color: @sapphire;
-  border-top-right-radius: 0px;
-  border-bottom-right-radius: 0px;
-  padding-left: 15px;
-  padding-right: 5px;
+	color: @sapphire;
+	border-top-right-radius: 0px;
+	border-bottom-right-radius: 0px;
+	padding-left: 15px;
+	padding-right: 5px;
 }
 #custom-vram
 {
-  color: @green;
-  border-radius: 0px;
-  padding-left: 5px;
-  padding-right: 15px;
+	color: @green;
+	border-radius: 0px;
+	padding-left: 5px;
+	padding-right: 15px;
 }
 
 #temperature
 {
-  color: @red;
-  border-radius: 0px;
-  padding-left: 5px;
-  padding-right: 5px;
+	color: @red;
+	border-radius: 0px;
+	padding-left: 5px;
+	padding-right: 5px;
 }
 
 #custom-gpu
 {
-  color: @green;
-  border-top-left-radius: 0px;
-  border-bottom-left-radius: 0px;
-  padding-left: 5px;
-  padding-right: 15px;
-  margin-right: 10px;
+	color: @green;
+	border-top-left-radius: 0px;
+	border-bottom-left-radius: 0px;
+	padding-left: 5px;
+	padding-right: 15px;
+	margin-right: 10px;
 }
 
 
@@ -125,9 +125,9 @@
 
 #network
 {
-  color: @blue;
-  padding-left: 15px;
-  padding-right: 15px;
+	color: @blue;
+	padding-left: 15px;
+	padding-right: 15px;
 }
 
 
@@ -137,9 +137,9 @@
 
 #custom-quote
 {
-  color: @green;
-  padding-left: 15px;
-  padding-right: 15px;
+	color: @green;
+	padding-left: 15px;
+	padding-right: 15px;
 }
 
 
@@ -148,61 +148,61 @@
 
 #custom-keyboard
 {
-  color: @green;
-  border-top-right-radius: 0px;
-  border-bottom-right-radius: 0px;
-  padding-left: 15px;
-  padding-right: 10px;
+	color: @green;
+	border-top-right-radius: 0px;
+	border-bottom-right-radius: 0px;
+	padding-left: 15px;
+	padding-right: 10px;
 }
 #custom-touchpad
 {
-  color: @green;
-  border-top-left-radius: 0px;
-  border-bottom-left-radius: 0px;
-  padding-left: 10px;
-  padding-right: 17px;
-  margin-right: 10px;
+	color: @green;
+	border-top-left-radius: 0px;
+	border-bottom-left-radius: 0px;
+	padding-left: 10px;
+	padding-right: 17px;
+	margin-right: 10px;
 }
 
 #custom-boost
 {
-  color: @red;
-  padding-left: 15px;
-  padding-right: 10px;
-  margin-right: 10px;
+	color: @red;
+	padding-left: 15px;
+	padding-right: 10px;
+	margin-right: 10px;
 }
 
 #pulseaudio
 {
-  color: @mauve;
-  border-top-right-radius: 0px;
-  border-bottom-right-radius: 0px;
-  padding-right: 5px;
+	color: @mauve;
+	border-top-right-radius: 0px;
+	border-bottom-right-radius: 0px;
+	padding-right: 5px;
 }
 
 #backlight
 {
-  color: @peach;
-  border-radius: 0px;
-  padding-left: 5px;
-  padding-right: 5px;
+	color: @peach;
+	border-radius: 0px;
+	padding-left: 5px;
+	padding-right: 5px;
 }
 
 #upower
 {
-  color: @green;
-  border-radius: 0px;
-  padding-left: 5px;
-  padding-right: 5px;
+	color: @green;
+	border-radius: 0px;
+	padding-left: 5px;
+	padding-right: 5px;
 }
 
 #tray
 {
-  color: @mauve;
-  border-top-left-radius: 0px;
-  border-bottom-left-radius: 0px;
-  padding-right: 15px;
-  margin-right: 10px;
+	color: @mauve;
+	border-top-left-radius: 0px;
+	border-bottom-left-radius: 0px;
+	padding-right: 15px;
+	margin-right: 10px;
 }
 
 
@@ -212,8 +212,8 @@
 
 #custom-clock
 {
-  color: @flamingo;
-  margin-right: 10px;
+	color: @flamingo;
+	margin-right: 10px;
 }
 
 
@@ -223,7 +223,7 @@
 
 #custom-power
 {
-  color: @red;
-  padding-left: 13px;
-  padding-right: 15px;
+	color: @red;
+	padding-left: 13px;
+	padding-right: 15px;
 }
