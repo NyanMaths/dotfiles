@@ -54,6 +54,7 @@
 #custom-power,
 #custom-keyboard,
 #custom-touchpad,
+#custom-vram,
 #custom-boost
 {
   background-color: @surface0;
@@ -90,6 +91,13 @@
   border-bottom-right-radius: 0px;
   padding-left: 15px;
   padding-right: 5px;
+}
+#custom-vram
+{
+  color: @green;
+  border-radius: 0px;
+  padding-left: 5px;
+  padding-right: 15px;
 }
 
 #temperature

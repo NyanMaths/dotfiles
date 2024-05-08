@@ -10,6 +10,7 @@
   [
     "custom/launcher",
     "memory",
+    "custom/vram",
     "temperature",
     "custom/gpu",
     "network"
@@ -41,15 +42,23 @@
   {
     "interval": 2,
     "format": "󰾆 {percentage}%",
+    "tooltip-format": "RAM usage",
     "on-click": "resources",
     "on-click-right": "kitty btop"
+  },
+  "custom/vram":
+  {
+    "interval": 2,
+    "exec": "~/.local/bin/nvidia-memory-usage.sh",
+    "format": "󰾆 {}%",
+    "tooltip-format": "VRAM usage"
   },
   "temperature":
   {
     "interval": 2,
     "format": " {temperatureC}°C",
     "format-icons": ["", "", "", "", ""],
-    "tooltip": false
+    "tooltip-format": "CPU temperature"
   },
   "custom/gpu":
   {
@@ -57,7 +66,7 @@
     "exec": "nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader,nounits",
     "format": "󰢮 {}°C",
     "return-type": "",
-    "tooltip": false
+    "tooltip-format": "GPU temperature"
   },
 
   "network":
@@ -78,19 +87,19 @@
   {
     "format": "󰌌",
     "on-click": "~/.config/hypr/scripts/keyboard-toggle.sh",
-    "tooltip": false
+    "tooltip-format": "toggle keyboard"
   },
   "custom/touchpad":
   {
     "format": "󰍽",
     "on-click": "~/.config/hypr/scripts/touchpad-toggle.sh",
-    "tooltip": false
+    "tooltip-format": "toggle touchpad"
   },
   "custom/boost":
   {
     "format": "󰾆 ",
     "on-click": "~/.config/hypr/scripts/toggle-pstate-boost.sh",
-    "tooltip": false
+    "tooltip-format": "toggle CPU boost"
   },
     
   "pulseaudio":
