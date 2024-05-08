@@ -68,7 +68,7 @@ Yeah, only PNG codec is supported by hyprlock at the moment, so forget about WEB
 <h3>Touchpad and keyboard toggles</h3>
 
 I made two scripts for toggling integrated touchpad and keyboard for laptops, but their name can differ from one computer to another.
-That is why you should ```hyprctl devices```, look for your integrated devices names and replace ```at-translated-set-2-keyboard``` and ```elan1203:00-04f3:307a-touchpad``` with yours in ```.config/hypr/scripts/keyboard-toggle.sh``` and ```.config/hypr/scripts/touchpad-toggle.sh``` respectively. That way, you will be able to easily access these controls in wabar and by keybinds (```super shift k``` and ```xf86touchpadtoggle```)
+That is why you should ```hyprctl devices```, look for your integrated devices names and replace ```at-translated-set-2-keyboard``` and ```elan1203:00-04f3:307a-touchpad``` with yours in ```.config/hypr/scripts/keyboard-toggle.sh```, ```.config/hypr/scripts/touchpad-toggle.sh``` and ```.config/hypr/input.conf```. That way, you will be able to easily access these controls in wabar and by keybinds (```super shift k``` and ```xf86touchpadtoggle```)
 
 <h3>The green one</h3>
 
