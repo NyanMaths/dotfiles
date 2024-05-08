@@ -71,8 +71,8 @@ I made two scripts for toggling integrated touchpad and keyboard for laptops, bu
 That is why you should ```hyprctl devices```, look for your integrated devices names and replace ```at-translated-set-2-keyboard``` and ```elan1203:00-04f3:307a-touchpad``` with yours in ```.config/hypr/scripts/keyboard-toggle.sh``` and ```.config/hypr/scripts/touchpad-toggle.sh``` respectively. That way, you will be able to easily access these controls in wabar and by keybinds (```super shift k``` and ```xf86touchpadtoggle```)
 
 <h3>The green one</h3>
-I set up hardware acceleration with nvidia but disabled rendering though it, because my monitor is not wired to my dGPU, so you might want to tweak these settings, in that case, get to [the Hyprland wiki](https://wiki.hyprland.org/Nvidia) for setting up this despicable thing.
-I left a config file for this, but be careful as I do not update it often : .config/hypr/nyavidia.conf
+I set up hardware acceleration with nvidia but disabled rendering though it, because my monitor is not wired to my dGPU, so you might want to tweak these settings, in that case, get to ![the Hyprland wiki](https://wiki.hyprland.org/Nvidia) for setting up this despicable thing.
+I left a config file for this, but be careful as I do not update it often : ```.config/hypr/nyavidia.conf```
 For people who does not have nvidia-smi, wabar should have a hard-angled part in the left : this is because the GPU temperature section cannot be displayed. Well, just round the previous corner in ```.config/waybar/config.jsonc``` to make it look pretty again.
 
 <h3>Turbo boost toggle</h3>
