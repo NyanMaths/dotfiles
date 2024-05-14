@@ -86,19 +86,19 @@
 	"custom/keyboard":
 	{
 		"format": "󰌌",
-		"on-click": "~/.config/hypr/scripts/keyboard-toggle.sh",
+		"on-click": "~/.local/bin/keyboard-toggle.sh",
 		"tooltip-format": "toggle keyboard"
 	},
 	"custom/touchpad":
 	{
 		"format": "󰍽",
-		"on-click": "~/.config/hypr/scripts/touchpad-toggle.sh",
+		"on-click": "~/.local/bin/touchpad-toggle.sh",
 		"tooltip-format": "toggle touchpad"
 	},
 	"custom/boost":
 	{
 		"format": "󰾆 ",
-		"on-click": "~/.config/hypr/scripts/toggle-pstate-boost.sh",
+		"on-click": "~/.local/bin/toggle-pstate-boost.sh",
 		"tooltip-format": "toggle CPU boost"
 	},
 	  
