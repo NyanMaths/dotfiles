@@ -11,7 +11,7 @@ Almost required software :
   - [rofi-wayland](https://github.com/lbonn/rofi) : app launcher
   - [wlogout](https://github.com/ArtsyMacaw/wlogout) : session menu
   - [hyprlock](https://github.com/hyprwm/hyprlock) : stylish lock screen
-  - [hyprpaper](https://github.com/hyprwm/hyprpaper) : yes
+  - [swww](https://github.com/LGFae/swww) : yes
   - [wl-clip-persist](https://github.com/Linus789/wl-clip-persist)<sup>AUR</sup> : finally a decent clipboard manager
   - [mako](https://github.com/emersion/mako) : notifications daemon
   - [brightnessctl](https://github.com/Hummer12007/brightnessctl) : brightness control
