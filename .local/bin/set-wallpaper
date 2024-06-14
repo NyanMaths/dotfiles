@@ -18,9 +18,10 @@ ln -s -r -f $1 ~/.mozilla/firefox/nyanmaths/chrome/ASSETS/wallpaper/wallpaper
 
 
 hyprctl hyprpaper preload "$1"
+sleep 0.2
 hyprctl hyprpaper wallpaper "eDP-1, $1"
 
-hyprctl hyprpaper unload all
+hyprctl hyprpaper unload unused
 
 wal -s -n -i $1
 
