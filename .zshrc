@@ -7,7 +7,7 @@ bindkey -e
 # The following lines were added by compinstall
 zstyle :compinstall filename '/home/nyanmaths/.zshrc'
 
-export PATH=$HOME/.local/bin:/usr/local/bin:$PATH
+export PATH=$HOME/.local/bin:/usr/local/bin:$HOME/.ghcup/bin:$PATH
 
 autoload -Uz compinit
 compinit
