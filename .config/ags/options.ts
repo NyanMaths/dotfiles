@@ -701,7 +701,7 @@ const options = mkOptions(OPTIONS, {
             powermenu: {
                 sleep: opt("systemctl suspend"),
                 reboot: opt("systemctl reboot"),
-                logout: opt("loginctl terminate-user $USER"),
+                logout: opt(`loginctl terminate-user \`bash -c whoami\``),
                 shutdown: opt("shutdown now"),
                 avatar: {
                     image: opt("avatar-default-symbolic"),

@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env sh
 
 # check file existence
 if [ ! -f $1 ]; then
@@ -13,11 +13,10 @@ fi
 
 
 # set passed wallpaper as current wallpaper
-ln -s -r -f $1 ~/.cache/wal/current-wallpaper
-ln -s -r -f $1 ~/.mozilla/firefox/nyanmaths/chrome/ASSETS/wallpaper/wallpaper
+ln -sfr $1 ~/.cache/wal/current-wallpaper
+ln -sfr $1 ~/.mozilla/firefox/nyanmaths/chrome/ASSETS/wallpaper/wallpaper
 
-
-swww img $1
+swww img --transition-type grow --transition-fps 60 --transition-duration 0.5 $1
 
 wal -s -n -i $1
 
