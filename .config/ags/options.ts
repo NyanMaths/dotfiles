@@ -684,7 +684,8 @@ const options = mkOptions(OPTIONS, {
             ]),
         },
         clock: {
-            format: opt("󰃭  %a %b %d    %I:%M %p"),
+            format: opt("  %I:%M %p"),
+            /* format: opt("󰃭  %a %b %d    %I:%M %p"), */
         },
         media: {
             show_artist: opt(false),
