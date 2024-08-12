@@ -202,7 +202,7 @@ const renderWAPs = (self: any, network: Network, staging: Variable<AccessPoint>,
                                     });
                                 },
                                 child: Widget.Label({
-                                    label: "󰚃",
+                                    label: "󰚃  ",
                                 }),
                             }),
                         }),
