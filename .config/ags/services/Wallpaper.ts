@@ -19,18 +19,15 @@ class Wallpaper extends Service {
             return
 
         hyprland.monitors.map(m => m.name);
-        sh("hyprctl cursorpos").then(pos => {
-            sh([
-                "swww", "img",
-                "--invert-y",
-                "--transition-type", "grow",
-                "--transition-duration", "0.6",
-                "--transition-fps", "120",
-                "--transition-pos", pos.replace(" ", ""),
-                WP,
-            ]).then(() => {
-                this.changed("wallpaper")
-            })
+        sh([
+            "swww", "img",
+            "--invert-y",
+            "--transition-type", "grow",
+            "--transition-duration", "0.6",
+            "--transition-fps", "120",
+            WP,
+        ]).then(() => {
+            this.changed("wallpaper")
         })
     }
 
