@@ -14,7 +14,7 @@ const connectedControls = (dev: BluetoothDevice, connectedDevices: BluetoothDevi
                 child: Widget.Label({
                     tooltip_text: dev.paired ? "Unpair" : "Pair",
                     class_name: "menu-icon-button-label unpair bluetooth",
-                    label: dev.paired ? "" : "",
+                    label: dev.paired ? "  " : "  ",
                 }),
                 on_primary_click: () =>
                     Utils.execAsync([
@@ -33,7 +33,7 @@ const connectedControls = (dev: BluetoothDevice, connectedDevices: BluetoothDevi
                 child: Widget.Label({
                     tooltip_text: dev.connected ? "Disconnect" : "Connect",
                     class_name: "menu-icon-button-label disconnect bluetooth",
-                    label: dev.connected ? " 󱘖"  :  " ",
+                    label: dev.connected ? " 󱘖 "  :  "  ",
                 }),
                 on_primary_click: () => dev.setConnection(!dev.connected),
             }),
@@ -42,7 +42,7 @@ const connectedControls = (dev: BluetoothDevice, connectedDevices: BluetoothDevi
                 child: Widget.Label({
                     tooltip_text: dev.trusted ? "Untrust" : "Trust",
                     class_name: "menu-icon-button-label untrust bluetooth",
-                    label: dev.trusted ? " "  :  "󱖡 ",
+                    label: dev.trusted ? "  "  :  " 󱖡 ",
                 }),
                 on_primary_click: () =>
                     Utils.execAsync([
