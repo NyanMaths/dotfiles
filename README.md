@@ -21,14 +21,14 @@ Almost required software :
 
 Status bar :
   - [ags](https://github.com/Aylur/ags) : Aylur's GTK shell
-  - [pipewire](https://gitlab.freedesktop.org/pipewire/pipewire), [bluez](https://github.com/bluez/bluez), [bluez-utils](https://github.com/bluez/bluez)
+  - [pipewire](https://gitlab.freedesktop.org/pipewire/pipewire), [bluez](https://github.com/bluez/bluez), [bluez-utils](https://github.com/bluez/bluez) : basic bluetooth support
   - [bun](https://github.com/oven-sh/bun)<sup>AUR</sup> : some JS fuckery
-  - [dart-sass](https://github.com/sass/sass)<sup>AUR</sup> : some CSS fuckery
+  - [dart-sass](https://github.com/sass/sass) : some CSS fuckery
   - [gnome-bluetooth-3.0](https://gitlab.gnome.org/GNOME/gnome-bluetooth) : for bluetooth applet
   - [hyprpicker](https://github.com/hyprwm/hyprpicker) : color picker for Hyprland
-  - [optional] [python-gpustat](https://github.com/wookayin/gpustat) : get nvidia GPU usage on dashboard
-  - [optional] [matugen](https://github.com/InioX/matugen) : a palette generator
-  - [optional] [gpu-screen-recorder](https://git.dec05eba.com/gpu-screen-recorder) : maybe this can work, but not for me
+  - [optional] [python-gpustat](https://github.com/wookayin/gpustat)<sup>AUR</sup> : get nvidia GPU usage on dashboard
+  - [optional] [matugen](https://github.com/InioX/matugen)<sup>AUR</sup> : a palette generator
+  - [optional] [gpu-screen-recorder](https://git.dec05eba.com/gpu-screen-recorder)<sup>AUR</sup> : maybe this can work, but not for me
 
 Old status bar :
   - [waybar](https://github.com/Alexays/Waybar) : wabar :)
@@ -44,7 +44,7 @@ Optional software :
   - [vesktop](https://github.com/Vencord/Vesktop) : best wayland discord client so far, but breaks ToS
   - [btop](https://github.com/aristocratos/btop) & [resources](https://github.com/nokyan/resources) : TUI & GUI system monitors
   - [grimblast-git](https://github.com/hyprwm/contrib)<sup>AUR</sup> : a really good screenshot utility for Hyprland
-  - [kvantum](https://github.com/tsujan/Kvantum) and [kvantum-qt5](https://github.com/tsujan/Kvantum) : for unified Qt and GTK themes
+  - [kvantum](https://github.com/tsujan/Kvantum) & [kvantum-qt5](https://github.com/tsujan/Kvantum) : for unified Qt and GTK themes
 
 
 <h1>Setup</h1>
