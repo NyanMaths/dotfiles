@@ -12,19 +12,30 @@ Almost required software :
   - [wlogout](https://github.com/ArtsyMacaw/wlogout) : session menu
   - [hyprlock](https://github.com/hyprwm/hyprlock) : stylish lock screen
   - [swww](https://github.com/LGFae/swww) : yes
-  - [wl-clip-persist](https://github.com/Linus789/wl-clip-persist)<sup>AUR</sup> : finally a decent clipboard manager
-  - [mako](https://github.com/emersion/mako) : notifications daemon
+  - [wl-clip-persist](https://github.com/Linus789/wl-clip-persist) and [wl-clipboard](https://github.com/bugaevc/wl-clipboard) : finally a decent clipboard manager
   - [brightnessctl](https://github.com/Hummer12007/brightnessctl) : brightness control
   - [playerctl](https://github.com/altdesktop/playerctl) : media player control
   - [python-pywal](https://github.com/dylanaraps/pywal) : automatic colours for Hyprland (archived, as neofetch...shiet)
   - [xdg-desktop-portal-hyprland](https://github.com/hyprwm/xdg-desktop-portal-hyprland) : portal for screensharing
   - [xdg-desktop-portal-gtk](https://github.com/flatpak/xdg-desktop-portal-gtk) : portal for file picker
-  - [gawk](https://git.savannah.gnu.org/cgit/gawk.git) : arithmetics for VRAM usage query
 
 Status bar :
+  - [ags](https://github.com/Aylur/ags) : Aylur's GTK shell
+  - [pipewire](https://gitlab.freedesktop.org/pipewire/pipewire), [bluez](https://github.com/bluez/bluez), [bluez-utils](https://github.com/bluez/bluez)
+  - [bun](https://github.com/oven-sh/bun)<sup>AUR</sup> : some JS fuckery
+  - [dart-sass](https://github.com/sass/sass)<sup>AUR</sup> : some CSS fuckery
+  - [gnome-bluetooth-3.0](https://gitlab.gnome.org/GNOME/gnome-bluetooth) : for bluetooth applet
+  - [hyprpicker](https://github.com/hyprwm/hyprpicker) : color picker for Hyprland
+  - [optional] [python-gpustat](https://github.com/wookayin/gpustat) : get nvidia GPU usage on dashboard
+  - [optional] [matugen](https://github.com/InioX/matugen) : a palette generator
+  - [optional] [gpu-screen-recorder](https://git.dec05eba.com/gpu-screen-recorder) : maybe this can work, but not for me
+
+Old status bar :
   - [waybar](https://github.com/Alexays/Waybar) : wabar :)
+  - [mako](https://github.com/emersion/mako) : notifications daemon
   - [blueman](https://github.com/blueman-project/blueman)
   - [network-manager-applet](https://gitlab.gnome.org/GNOME/network-manager-applet)
+  - [gawk](https://git.savannah.gnu.org/cgit/gawk.git) : arithmetics for VRAM usage query
 
 Optional software :
   - [greetd](https://github.com/kennylevinsen/greetd) : a minimalistic login manager
@@ -33,6 +44,7 @@ Optional software :
   - [vesktop](https://github.com/Vencord/Vesktop) : best wayland discord client so far, but breaks ToS
   - [btop](https://github.com/aristocratos/btop) & [resources](https://github.com/nokyan/resources) : TUI & GUI system monitors
   - [grimblast-git](https://github.com/hyprwm/contrib)<sup>AUR</sup> : a really good screenshot utility for Hyprland
+  - [kvantum](https://github.com/tsujan/Kvantum) and [kvantum-qt5](https://github.com/tsujan/Kvantum) : for unified Qt and GTK themes
 
 
 <h1>Setup</h1>
