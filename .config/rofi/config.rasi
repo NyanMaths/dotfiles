@@ -134,7 +134,7 @@ window
     fullscreen: true;
     transparency: "real";
     cursor: "default";
-    background-color: black / 20%;
+    background-color: black / 55%;
     border: 0px;
     border-color: @selected;
 }
