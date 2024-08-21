@@ -44,7 +44,7 @@
 		"format": "󰾆 {percentage}%",
 		"tooltip-format": "RAM usage",
 		"on-click": "resources",
-		"on-click-right": "alacritty -e btop"
+		"on-click-right": "kitty btop"
 	},
 	"custom/vram":
 	{
