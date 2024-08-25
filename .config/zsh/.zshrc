@@ -1,16 +1,12 @@
-# Lines configured by zsh-newuser-install
-HISTFILE=~/.zsh_history
+HISTFILE=$XDG_STATE_HOME/zsh/history
 HISTSIZE=100000
 SAVEHIST=100000
 bindkey -e
-# End of lines configured by zsh-newuser-install
-# The following lines were added by compinstall
-zstyle :compinstall filename '/home/nyanmaths/.zshrc'
 
 export PATH=$HOME/.local/bin:/usr/local/bin:$HOME/.ghcup/bin:$PATH
 
 autoload -Uz compinit
-compinit
+compinit -d "$XDG_CACHE_HOME"/zsh/zcompdump-"$ZSH_VERSION"
 
 ZSH=/usr/share/oh-my-zsh/
 ZSH_THEME="awesomepanda"
@@ -18,7 +14,7 @@ ZSH_THEME="awesomepanda"
 
 plugins=(git)
 
-ZSH_CACHE_DIR=$HOME/.cache/oh-my-zsh
+ZSH_CACHE_DIR=$XDG_CACHE_HOME/oh-my-zsh
 if [[ ! -d $ZSH_CACHE_DIR ]]; then
   mkdir $ZSH_CACHE_DIR
 fi
