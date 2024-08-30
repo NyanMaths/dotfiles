@@ -8,6 +8,10 @@ export PATH=$HOME/.local/bin:/usr/local/bin:$HOME/.ghcup/bin:$PATH
 autoload -Uz compinit
 compinit -d "$XDG_CACHE_HOME"/zsh/zcompdump-"$ZSH_VERSION"
 
+export PYENV_ROOT="$XDG_DATA_HOME/pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+
 ZSH=/usr/share/oh-my-zsh/
 ZSH_THEME="awesomepanda"
 

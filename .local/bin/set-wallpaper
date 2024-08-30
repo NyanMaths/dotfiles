@@ -14,7 +14,7 @@ fi
 
 # set passed wallpaper as current wallpaper
 ln -sfr $1 ~/.cache/wal/current-wallpaper
-ln -sfr $1 ~/.mozilla/firefox/nyanmaths/chrome/ASSETS/wallpaper/wallpaper
+ln -sfr $1 ~/.mozilla/firefox/nyanmaths/chrome/assets/current-wallpaper
 
 swww img --transition-type grow --transition-fps 60 --transition-duration 0.5 $1
 
