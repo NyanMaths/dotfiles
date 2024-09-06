@@ -109,3 +109,9 @@ I set up hardware acceleration with nvidia but disabled rendering though it, bec
 <h3>Turbo boost toggle</h3>
 
 This one is only supposed to work for intel CPUs using pstate driver, without any guarantee. This was painful and I do not plan on making it it better for now.
+
+
+<h2> Credits </h2>
+
+Hyprland : https://github.com/hyprwm/Hyprland
+<br />HyprPanel : https://github.com/Jas-SinghFSU/HyprPanel
