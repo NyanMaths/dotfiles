@@ -6,13 +6,14 @@ Rofi theme :
 Wlogout theme :
 ![image](https://github.com/NyanMaths/dotfiles/assets/64662422/aaa2aa21-5b5d-4d18-aa34-f16af59273e4)
 
+I am currently fighting against those annoying config, cache and data directories inside of my home folder, so there is a bunch of environment set for this, you may yeet this without any problem.
+
 
 Almost required software :
   - [rofi-wayland](https://github.com/lbonn/rofi) : app launcher
-  - [wlogout](https://github.com/ArtsyMacaw/wlogout) : session menu
   - [hyprlock](https://github.com/hyprwm/hyprlock) : stylish lock screen
   - [swww](https://github.com/LGFae/swww) : yes
-  - [wl-clip-persist](https://github.com/Linus789/wl-clip-persist) and [wl-clipboard](https://github.com/bugaevc/wl-clipboard) : finally a decent clipboard manager
+  - [wl-clip-persist](https://github.com/Linus789/wl-clip-persist) and [wl-clipboard](https://github.com/bugaevc/wl-clipboard) : finally a working clipboard manager
   - [brightnessctl](https://github.com/Hummer12007/brightnessctl) : brightness control
   - [playerctl](https://github.com/altdesktop/playerctl) : media player control
   - [python-pywal](https://github.com/dylanaraps/pywal) : automatic colours for Hyprland (archived, as neofetch...shiet)
@@ -32,6 +33,7 @@ Status bar :
 
 Old status bar :
   - [waybar](https://github.com/Alexays/Waybar) : wabar :)
+  - [wlogout](https://github.com/ArtsyMacaw/wlogout) : session menu
   - [mako](https://github.com/emersion/mako) : notifications daemon
   - [blueman](https://github.com/blueman-project/blueman)
   - [network-manager-applet](https://gitlab.gnome.org/GNOME/network-manager-applet)
@@ -52,7 +54,7 @@ Optional software :
 <h2>Login manager</h2>
 
 You should use autologin feature from your login manager as my config will lock your session automatically on startup because hyprlock is classier than any login manager's config known to me.
-<br />In that case,do not forget to automatically launch ```dbus-run-session Hyprland``` and not just ```Hyprland```, otherwise some things will beak, especially screenshare.
+<br />In that case,do not forget to automatically launch ```dbus-run-session Hyprland``` and not just ```Hyprland```, otherwise some things will break, especially screenshare.
 <br />Edit ```/etc/greetd/config.toml``` :
 ```
 [terminal]
@@ -76,9 +78,21 @@ user = "greeter"
 Please replace eDP-1 with your monitor's name from ```hyprctl monitors``` in ```.config/hypr/hyprpaper.conf```, thanks to a bug of Hyprland which prevents IPC from well-behaving for now.
 <br />You shall run set-wallpaper once in order to get your dynamic rice accordingly.
 <br />Before first launch of this script, your colours will be defaults and there will be no wallpaper. Just ```~/.local/bin/set-wallpaper /your/wallpaper/path.png```.
-<br />Yeah, only PNG codec is supported by hyprlock at the moment, so forget about WEBP and JPG. Just pray for animated wallpaper support.
+<br />Yeah, only static images are supported by hyprlock at the moment, so forget about GIF, animated WEBP or AVIF. Just pray for animated wallpaper support.
+<br />Or pray so that I finally write a stupid shell script to extract the first frame of an animated wallpaper to make hyprlock happy, but I'm too lazy :3.
 
 <h2>Functionalities</h2>
+
+<h3>ZSH environment</h3>
+As I have to set them outside of Hyprland's config, here they are :
+<br />Edit ```/etc/zsh/zshenv``` :
+```
+export XDG_DATA_HOME="$HOME"/.local/share
+export XDG_CONFIG_HOME="$HOME"/.config
+export XDG_CACHE_HOME="$HOME"/.cache
+
+export ZDOTDIR="$XDG_CONFIG_HOME"/zsh
+```
 
 <h3>Touchpad and keyboard toggles</h3>
 
