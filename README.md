@@ -84,6 +84,7 @@ Please replace eDP-1 with your monitor's name from ```hyprctl monitors``` in ```
 <h2>Functionalities</h2>
 
 <h3>ZSH environment</h3>
+
 As I have to set them outside of Hyprland's config, here they are :
 <br />Edit ```/etc/zsh/zshenv``` :
 ```
