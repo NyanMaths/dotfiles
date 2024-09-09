@@ -1,10 +1,20 @@
 import { Opt } from "lib/option";
 import { Variable } from "types/variable";
 
+export type RecursiveOptionsObject = {
+    [key: string]: RecursiveOptionsObject | Opt<string | number | boolean> | Opt<any>;
+};
+
 export type Unit = "imperial" | "metric";
 export type PowerOptions = "sleep" | "reboot" | "logout" | "shutdown";
 export type NotificationAnchor = "top" | "top right" | "top left" | "bottom" | "bottom right" | "bottom left" | "left" | "right";
 export type OSDAnchor = "top left" | "top" | "top right" | "right" | "bottom right" | "bottom" | "bottom left" | "left";
+export type BarButtonStyles = "default" | "split" | "wave" | "wave2";
+
+export type ThemeExportData = {
+    filePath: string,
+    themeOnly: boolean
+}
 export type RowProps<T> = {
     opt: Opt<T>
     title: string
@@ -19,12 +29,17 @@ export type RowProps<T> = {
     | "boolean"
     | "img"
     | "wallpaper"
+    | "export"
+    | "import"
+    | "config_import"
     | "font"
     enums?: string[]
     max?: number
     min?: number
     disabledBinding?: Variable<boolean>
+    exportData?: ThemeExportData
     subtitle?: string | VarType<any> | Opt,
+    subtitleLink?: string,
     dependencies?: string[],
     increment?: number
 }
@@ -106,3 +121,4 @@ type MatugenVariation =
     | "vivid_3"
 
 type MatugenTheme = "light" | "dark";
+

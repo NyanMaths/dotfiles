@@ -1,6 +1,8 @@
 const hyprland = await Service.import("hyprland");
-import { globalMousePos } from "globals";
+import { DropdownMenuProps } from "lib/types/dropdownmenu";
 import { Exclusivity } from "lib/types/widget";
+import { bash } from "lib/utils";
+import { Monitor } from "types/service/hyprland";
 
 export const Padding = (name: string) =>
     Widget.EventBox({
@@ -16,11 +18,23 @@ const moveBoxToCursor = (self: any, fixed: boolean) => {
         return;
     }
 
-    globalMousePos.connect("changed", ({ value }) => {
+    globalMousePos.connect("changed", async ({ value }) => {
         const curHyprlandMonitor = hyprland.monitors.find(m => m.id === hyprland.active.monitor.id);
         const dropdownWidth = self.child.get_allocation().width;
 
-        const hyprScaling = curHyprlandMonitor?.scale;
+        let hyprScaling = 1;
+        try {
+            const monitorInfo = await bash('hyprctl monitors -j');
+            const parsedMonitorInfo = JSON.parse(monitorInfo);
+
+            const foundMonitor = parsedMonitorInfo.find((monitor: Monitor) =>
+                monitor.id === hyprland.active.monitor.id
+            );
+            hyprScaling = foundMonitor?.scale || 1;
+        } catch (error) {
+            console.error(`Error parsing hyprland monitors: ${error}`);
+        }
+
         let monWidth = curHyprlandMonitor?.width;
         let monHeight = curHyprlandMonitor?.height;
 
@@ -86,15 +100,17 @@ setTimeout(() => {
     initRender.value = false;
 }, 2000);
 
-export default ({
-    name,
-    child,
-    layout = "center",
-    transition,
-    exclusivity = "ignore" as Exclusivity,
-    fixed = false,
-    ...props
-}) =>
+export default (
+    {
+        name,
+        child,
+        layout = "center",
+        transition,
+        exclusivity = "ignore" as Exclusivity,
+        fixed = false,
+        ...props
+    }: DropdownMenuProps
+) =>
     Widget.Window({
         name,
         class_names: [name, "dropdown-menu"],
@@ -112,6 +128,17 @@ export default ({
                 class_name: "top-eb",
                 vertical: true,
                 children: [
+                    Widget.EventBox({
+                        class_name: "mid-eb event-top-padding-static",
+                        hexpand: true,
+                        vexpand: false,
+                        can_focus: false,
+                        child: Widget.Box(),
+                        setup: (w) => {
+                            w.on("button-press-event", () => App.toggleWindow(name));
+                            w.set_margin_top(1);
+                        },
+                    }),
                     Widget.EventBox({
                         class_name: "mid-eb event-top-padding",
                         hexpand: true,

@@ -6,7 +6,7 @@ const { terminal } = options;
 const { enable_gpu } = options.menus.dashboard.stats;
 
 const Stats = () => {
-    const divide = ([total, free]) => free / total;
+    const divide = ([total, free]: number[]) => free / total;
 
     const formatSizeInGB = (sizeInKB: number) =>
         Number((sizeInKB / 1024 ** 2).toFixed(2));
@@ -26,7 +26,8 @@ const Stats = () => {
                     return 0;
                 }
 
-                return divide([100, cpuOut.split(/\s+/)[1].replace(",", ".")]);
+                const freeCpu = parseFloat(cpuOut.split(/\s+/)[1].replace(",", "."));
+                return divide([100, freeCpu]);
             },
         ],
     });
@@ -123,19 +124,22 @@ const Stats = () => {
                                         on_primary_click: terminal.bind("value").as(term => {
                                             return () => {
                                                 App.closeWindow("dashboardmenu");
-                                                Utils.execAsync(`resources`).catch(
-                                                    (err) => `Failed to open resources: ${err}`,
+                                                Utils.execAsync(`bash -c "${term} -e btop"`).catch(
+                                                    (err) => `Failed to open btop: ${err}`,
                                                 );
                                             }
                                         }),
-                                        label: "󰢮",
+                                        child: Widget.Label({
+                                            class_name: "txt-icon",
+                                            label: "󰢮",
+                                        })
                                     }),
                                     Widget.Button({
                                         on_primary_click: terminal.bind("value").as(term => {
                                             return () => {
                                                 App.closeWindow("dashboardmenu");
-                                                Utils.execAsync(`resources`).catch(
-                                                    (err) => `Failed to open resources: ${err}`,
+                                                Utils.execAsync(`bash -c "${term} -e btop"`).catch(
+                                                    (err) => `Failed to open btop: ${err}`,
                                                 );
                                             }
                                         }),
@@ -222,19 +226,22 @@ const Stats = () => {
                                 on_primary_click: terminal.bind("value").as(term => {
                                     return () => {
                                         App.closeWindow("dashboardmenu");
-                                        Utils.execAsync(`resources`).catch(
-                                            (err) => `Failed to open resources: ${err}`,
+                                        Utils.execAsync(`bash -c "${term} -e btop"`).catch(
+                                            (err) => `Failed to open btop: ${err}`,
                                         );
                                     }
                                 }),
-                                label: "",
+                                child: Widget.Label({
+                                    class_name: "txt-icon",
+                                    label: "",
+                                })
                             }),
                             Widget.Button({
                                 on_primary_click: terminal.bind("value").as(term => {
                                     return () => {
                                         App.closeWindow("dashboardmenu");
-                                        Utils.execAsync(`resources`).catch(
-                                            (err) => `Failed to open resources: ${err}`,
+                                        Utils.execAsync(`bash -c "${term} -e btop"`).catch(
+                                            (err) => `Failed to open btop: ${err}`,
                                         );
                                     }
                                 }),
@@ -268,19 +275,22 @@ const Stats = () => {
                                 on_primary_click: terminal.bind("value").as(term => {
                                     return () => {
                                         App.closeWindow("dashboardmenu");
-                                        Utils.execAsync(`resources"`).catch(
-                                            (err) => `Failed to open resources: ${err}`,
+                                        Utils.execAsync(`bash -c "${term} -e btop"`).catch(
+                                            (err) => `Failed to open btop: ${err}`,
                                         );
                                     }
                                 }),
-                                label: "",
+                                child: Widget.Label({
+                                    class_name: "txt-icon",
+                                    label: "",
+                                })
                             }),
                             Widget.Button({
                                 on_primary_click: terminal.bind("value").as(term => {
                                     return () => {
                                         App.closeWindow("dashboardmenu");
-                                        Utils.execAsync(`resources`).catch(
-                                            (err) => `Failed to open resources: ${err}`,
+                                        Utils.execAsync(`bash -c "${term} -e btop"`).catch(
+                                            (err) => `Failed to open btop: ${err}`,
                                         );
                                     }
                                 }),
@@ -313,19 +323,22 @@ const Stats = () => {
                                 on_primary_click: terminal.bind("value").as(term => {
                                     return () => {
                                         App.closeWindow("dashboardmenu");
-                                        Utils.execAsync(`resources"`).catch(
-                                            (err) => `Failed to open resources: ${err}`,
+                                        Utils.execAsync(`bash -c "${term} -e btop"`).catch(
+                                            (err) => `Failed to open btop: ${err}`,
                                         );
                                     }
                                 }),
-                                label: "󰋊",
+                                child: Widget.Label({
+                                    class_name: "txt-icon",
+                                    label: "󰋊",
+                                })
                             }),
                             Widget.Button({
                                 on_primary_click: terminal.bind("value").as(term => {
                                     return () => {
                                         App.closeWindow("dashboardmenu");
-                                        Utils.execAsync(`resources`).catch(
-                                            (err) => `Failed to open resources: ${err}`,
+                                        Utils.execAsync(`bash -c "${term} -e btop"`).catch(
+                                            (err) => `Failed to open btop: ${err}`,
                                         );
                                     }
                                 }),

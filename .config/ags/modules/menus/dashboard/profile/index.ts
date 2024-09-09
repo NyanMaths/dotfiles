@@ -1,16 +1,35 @@
-import icons from "../../../icons/index.js";
 import powermenu from "../../power/helpers/actions.js";
 import { PowerOptions } from "lib/types/options.js";
 import GdkPixbuf from "gi://GdkPixbuf";
 
 import options from "options";
 const { image, name } = options.menus.dashboard.powermenu.avatar;
+const { confirmation, shutdown, logout, sleep, reboot } = options.menus.dashboard.powermenu;
 
 const Profile = () => {
     const handleClick = (action: PowerOptions) => {
+        const actions = {
+            shutdown: shutdown.value,
+            reboot: reboot.value,
+            logout: logout.value,
+            sleep: sleep.value,
+        };
         App.closeWindow("dashboardmenu");
-        return powermenu.action(action);
+
+        if (!confirmation.value) {
+            Utils.execAsync(actions[action])
+                .catch((err) => console.error(`Failed to execute ${action} command. Error: ${err}`));
+        } else {
+            powermenu.action(action);
+        }
     };
+
+    const getIconForButton = (txtIcon: string) => {
+        return Widget.Label({
+            className: "txt-icon",
+            label: txtIcon
+        })
+    }
 
     return Widget.Box({
         class_name: "profiles-container",
@@ -22,15 +41,15 @@ const Profile = () => {
                 hexpand: true,
                 vertical: true,
                 children: [
-                    Widget.Icon({
+                    Widget.Box({
                         hpack: "center",
                         class_name: "profile-picture",
-                        icon: image.bind("value").as(i => {
+                        css: image.bind("value").as(i => {
                             try {
                                 GdkPixbuf.Pixbuf.new_from_file(i);
-                                return i;
+                                return `background-image: url("${i}")`
                             } catch {
-                                return "avatar-default-symbolic";
+                                return `background-image: url("${App.configDir}/assets/hyprpanel.png")`
                             }
                         }),
                     }),
@@ -56,30 +75,30 @@ const Profile = () => {
                         on_clicked: () => handleClick("shutdown"),
                         tooltip_text: "Shut Down",
                         vexpand: true,
-                        child: Widget.Icon(icons.powermenu.shutdown),
+                        child: getIconForButton("󰐥")
                     }),
                     Widget.Button({
                         class_name: "dashboard-button restart",
                         on_clicked: () => handleClick("reboot"),
                         tooltip_text: "Restart",
                         vexpand: true,
-                        child: Widget.Icon(icons.powermenu.reboot),
+                        child: getIconForButton("󰜉")
                     }),
                     Widget.Button({
                         class_name: "dashboard-button lock",
                         on_clicked: () => handleClick("logout"),
                         tooltip_text: "Log Out",
                         vexpand: true,
-                        child: Widget.Icon(icons.powermenu.logout),
+                        child: getIconForButton("󰿅")
                     }),
                     Widget.Button({
                         class_name: "dashboard-button sleep",
                         on_clicked: () => handleClick("sleep"),
                         tooltip_text: "Sleep",
                         vexpand: true,
-                        child: Widget.Icon(icons.powermenu.sleep),
+                        child: getIconForButton("󰤄")
                     }),
-                ],
+                ]
             }),
         ],
     });

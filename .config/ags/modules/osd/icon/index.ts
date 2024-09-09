@@ -1,13 +1,12 @@
-import { OSDOrientation } from "lib/types/options";
 import brightness from "services/Brightness"
 const audio = await Service.import("audio")
 
-export const OSDIcon = (ort: OSDOrientation) => {
+export const OSDIcon = () => {
     return Widget.Box({
         class_name: "osd-icon-container",
         hexpand: true,
         child: Widget.Label({
-            class_name: "osd-icon",
+            class_name: "osd-icon txt-icon",
             hexpand: true,
             vexpand: true,
             hpack: "center",

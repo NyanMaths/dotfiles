@@ -3,7 +3,29 @@ import { MediaInfo } from "./components/mediainfo.js";
 import { Controls } from "./components/controls.js";
 import { Bar } from "./components/bar.js";
 import { MprisPlayer } from "types/service/mpris.js";
+import options from "options.js";
 
+const { tint, color } = options.theme.bar.menus.menu.media.card;
+
+const generateAlbumArt = (imageUrl: string): string => {
+    const userTint = tint.value;
+    const userHexColor = color.value;
+    let css: string;
+
+    const r = parseInt(userHexColor.slice(1, 3), 16);
+    const g = parseInt(userHexColor.slice(3, 5), 16);
+    const b = parseInt(userHexColor.slice(5, 7), 16);
+
+    const alpha = userTint / 100;
+
+    css = `background-image: linear-gradient(
+                rgba(${r}, ${g}, ${b}, ${alpha}),
+                rgba(${r}, ${g}, ${b}, ${alpha}),
+                ${userHexColor} 65em
+            ), url("${imageUrl}");`;
+
+    return css;
+}
 const Media = () => {
     const curPlayer = Variable("");
 
@@ -15,17 +37,17 @@ const Media = () => {
         };
 
         const isPlaying = media.players.find(
-            (p) => p["play-back-status"] === "Playing",
+            (p) => p["play_back_status"] === "Playing",
         );
 
         const playerStillExists = media.players.some(
-            (p) => curPlayer.value === p["bus-name"],
+            (p) => curPlayer.value === p["bus_name"],
         );
 
         const nextPlayerUp = media.players.sort(
             (a, b) =>
-                statusOrder[a["play-back-status"]] -
-                statusOrder[b["play-back-status"]],
+                statusOrder[a["play_back_status"]] -
+                statusOrder[b["play_back_status"]],
         )[0].bus_name;
 
         if (isPlaying || !playerStillExists) {
@@ -65,11 +87,14 @@ const Media = () => {
                         self.hook(media, () => {
                             const curPlayer = getPlayerInfo();
                             if (curPlayer !== undefined) {
-                                self.css = `background-image: linear-gradient(
-                  rgba(30, 30, 46, 0.85),
-                  rgba(30, 30, 46, 0.9),
-                  #1e1e2e 40em), url("${curPlayer.track_cover_url}");
-                   `;
+                                self.css = generateAlbumArt(curPlayer.track_cover_url);
+                            }
+                        });
+
+                        Utils.merge([color.bind("value"), tint.bind("value")], () => {
+                            const curPlayer = getPlayerInfo();
+                            if (curPlayer !== undefined) {
+                                self.css = generateAlbumArt(curPlayer.track_cover_url);
                             }
                         });
                     },

@@ -75,10 +75,6 @@
   }
 }
 
-tooltip label {
-  font-size: 0.9em;
-}
-
 .menu-separator {
   min-height: .1rem;
   margin: .6rem 0rem;
@@ -89,14 +85,12 @@ tooltip label {
   background: $crust;
   border: $bar-menus-border-size solid $bar-menus-border-color;
   border-radius: $bar-menus-border-radius;
-  min-width: 18em;
   color: $text;
 }
 
 .menu-items-container {
   border-radius: 0.4em;
   font-size: 1.3em;
-  min-width: 18em;
 }
 
 .menu-section-container {
@@ -239,9 +233,14 @@ tooltip label {
   color: $sky;
 }
 
+.event-top-padding-static * {
+  min-height: 0em;
+  margin-top: 2.8em;
+}
+
 .event-top-padding * {
   min-height: 0em;
-  margin-top: 2.8em + if($bar-floating, $bar-margin_top, 0em);
+  margin-top: if($bar-floating, $bar-margin_top, 0);
 }
 
 @keyframes spin {

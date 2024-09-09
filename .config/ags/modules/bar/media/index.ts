@@ -4,24 +4,30 @@ import { openMenu } from "../utils.js";
 import options from "options";
 import { getCurrentPlayer } from 'lib/shared/media.js';
 
-const { show_artist, truncation, truncation_size } = options.bar.media;
+const { show_artist, truncation, truncation_size, show_label, show_active_only } = options.bar.media;
 
 const Media = () => {
     const activePlayer = Variable(mpris.players[0]);
+    const isVis = Variable(!show_active_only.value);
+
+    show_active_only.connect("changed", () => {
+        isVis.value = !show_active_only.value || mpris.players.length > 0;
+    });
 
     mpris.connect("changed", () => {
         const curPlayer = getCurrentPlayer(activePlayer.value);
         activePlayer.value = curPlayer;
+        isVis.value = !show_active_only.value || mpris.players.length > 0;
     });
 
     const getIconForPlayer = (playerName: string): string => {
         const windowTitleMap = [
-            ["Firefox", "󰈹 "],
-            ["Microsoft Edge", "󰇩 "],
-            ["Discord", " "],
-            ["Plex", "󰚺 "],
-            ["Spotify", "󰓇 "],
-            ["(.*)", "󰝚 "],
+            ["Firefox", "󰈹"],
+            ["Microsoft Edge", "󰇩"],
+            ["Discord", ""],
+            ["Plex", "󰚺"],
+            ["Spotify", "󰓇"],
+            ["(.*)", "󰝚"],
         ];
 
         const foundMatch = windowTitleMap.find((wt) =>
@@ -33,14 +39,14 @@ const Media = () => {
 
     const songIcon = Variable("");
 
-    const mediaLabel = Utils.watch("󰎇 Media 󰎇", [mpris, show_artist, truncation, truncation_size], () => {
-        if (activePlayer.value) {
+    const mediaLabel = Utils.watch("Media", [mpris, show_artist, truncation, truncation_size, show_label], () => {
+        if (activePlayer.value && show_label.value) {
             const { track_title, identity, track_artists } = activePlayer.value;
             songIcon.value = getIconForPlayer(identity);
             const trackArtist = show_artist.value
                 ? ` - ${track_artists.join(', ')}`
                 : ``;
-            const truncatedLabel = truncation.value 
+            const truncatedLabel = truncation.value
                 ? `${track_title + trackArtist}`.substring(0, truncation_size.value)
                 : `${track_title + trackArtist}`;
 
@@ -50,8 +56,8 @@ const Media = () => {
                     ? `${truncatedLabel}`
                     : `${truncatedLabel.substring(0, truncatedLabel.length - 3)}...`;
         } else {
-            songIcon.value = "";
-            return "󰎇 Media 󰎇";
+            songIcon.value = getIconForPlayer(activePlayer.value?.identity || "");
+            return `Media`;
         }
     });
 
@@ -59,12 +65,20 @@ const Media = () => {
         component: Widget.Box({
             visible: false,
             child: Widget.Box({
-                class_name: "media",
+                className: Utils.merge([options.theme.bar.buttons.style.bind("value"), show_label.bind("value")], (style, showLabel) => {
+                    const styleMap = {
+                        default: "style1",
+                        split: "style2",
+                        wave: "style3",
+                        wave2: "style3",
+                    };
+                    return `media ${styleMap[style]}`;
+                }),
                 child: Widget.Box({
                     children: [
                         Widget.Label({
-                            class_name: "bar-button-icon media",
-                            label: songIcon.bind("value"),
+                            class_name: "bar-button-icon media txt-icon bar",
+                            label: songIcon.bind("value").as(v => v || "󰝚"),
                         }),
                         Widget.Label({
                             class_name: "bar-button-label media",
@@ -74,7 +88,7 @@ const Media = () => {
                 }),
             }),
         }),
-        isVisible: false,
+        isVis,
         boxClass: "media",
         name: "media",
         props: {

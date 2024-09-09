@@ -2,7 +2,7 @@ import { dependencies, sh } from "lib/utils"
 import options from "options";
 const hyprland = await Service.import("hyprland");
 
-const WP = `${Utils.HOME}/.cache/wal/current-wallpaper`
+const WP = `${Utils.HOME}/.config/background`
 
 class Wallpaper extends Service {
     static {
@@ -19,27 +19,27 @@ class Wallpaper extends Service {
             return
 
         hyprland.monitors.map(m => m.name);
-        sh([
-            "swww", "img",
-            "--invert-y",
-            "--transition-type", "grow",
-            "--transition-duration", "0.6",
-            "--transition-fps", "120",
-            WP,
-        ]).then(() => {
-            this.changed("wallpaper")
+        sh("hyprctl cursorpos").then(pos => {
+            sh([
+                "swww", "img",
+                "--invert-y",
+                "--transition-type", "grow",
+                "--transition-duration", "1.5",
+                "--transition-fps", "30",
+                "--transition-pos", pos.replace(" ", ""),
+                WP,
+            ]).then(() => {
+                this.changed("wallpaper")
+            })
         })
     }
 
     async #setWallpaper(path: string) {
         this.#blockMonitor = true
 
-		await sh(`ln -s -r -f ${path} ${WP}`)
+        await sh(`cp ${path} ${WP}`)
         this.#wallpaper()
-		await sh(`wal -s -n -i ${path}`)
 
-		await sh(`ln -sfr ${path} ${Utils.HOME}/.mozilla/firefox/nyanmaths/chrome/ASSETS/wallpaper/wallpaper`)
-		
         this.#blockMonitor = false
     }
 
@@ -51,10 +51,36 @@ class Wallpaper extends Service {
     constructor() {
         super()
 
+        options.wallpaper.enable.connect("changed", () => {
+            if (options.wallpaper.enable.value) {
+                this.#isRunning = true
+                Utils.execAsync("swww-daemon")
+                    .then(() => {
+                        this.#wallpaper
+                    })
+                    .catch(() => null)
+            } else {
+                this.#isRunning = false
+                Utils.execAsync("pkill swww-daemon")
+                    .catch(() => null)
+            }
+
+        })
+
         if (!dependencies("swww") || !options.wallpaper.enable.value)
             return this
 
         this.#isRunning = true
+        Utils.monitorFile(WP, () => {
+            if (!this.#blockMonitor)
+                this.#wallpaper()
+        })
+
+        Utils.execAsync("swww-daemon")
+            .then(() => {
+                this.#wallpaper
+            })
+            .catch(() => null)
     }
 }
 

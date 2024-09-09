@@ -1,7 +1,3 @@
-.notification-card-container {
-  margin-top: 3.5rem;
-}
-
 .notification-card {
   color: $notification-text;
   background: $notification-background;
@@ -9,10 +5,15 @@
   border: 0.15em solid transparentize($notification-border, 0.5);
   min-width: 26em;
   min-height: 6rem;
-  border-radius: 0.6em;
+  border-radius: $notification-border_radius;
+  opacity: $notification-opacity * 0.01;
 }
 
 .notification-card-container {
+  * {
+    font-size: $font-size * $notification-scaling * 0.01;
+  }
+
   padding: 1px;
 }
 
@@ -94,7 +95,7 @@
   background: $notification-close_button-background;
   color: $notification-close_button-label;
   min-width: 2.1em;
-  border-radius: 0rem 0.35em 0.35em 0em;
+  border-radius: 0rem $notification-border_radius*0.7 $notification-border_radius*0.7 0em;
 
   label {
     font-size: 1.5em;
