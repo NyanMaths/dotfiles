@@ -6,7 +6,7 @@ if [[ ! -d $ZSH_CACHE_DIR ]]; then
   mkdir $ZSH_CACHE_DIR
 fi
 
-export PATH=$HOME/.local/bin:/usr/local/bin:$HOME/.ghcup/bin:$PATH
+export PATH=$HOME/.local/bin:/usr/local/bin:$PATH
 
 
 HISTFILE=$XDG_STATE_HOME/zsh/history
@@ -28,3 +28,7 @@ ZSH_THEME="awesomepanda"
 bindkey -e
 
 source $ZSH/oh-my-zsh.sh
+
+
+alias micro="nvim"
+

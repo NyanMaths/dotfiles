@@ -1,4 +1,5 @@
 {
+  "bar.customModules.updates.pollingInterval": 1440000,
   "bar.network.truncation": true,
   "wallpaper.enable": true,
   "theme.osd.enable": true,
@@ -22,7 +23,6 @@
   "menus.dashboard.powermenu.avatar.image": "/home/nyanmaths/NY4N_M4THS/images/NY4N_4V4T4R/NY4N_M4THS.png",
   "menus.dashboard.powermenu.logout": "pkill Hyprland",
   "menus.dashboard.stats.enable_gpu": false,
-  "bar.customModules.updates.pollingInterval": 1440000,
   "theme.bar.floating": false,
   "theme.bar.layer": "top",
   "bar.clock.format": "%I:%M %p",
@@ -60,5 +60,7 @@
   "theme.bar.border_radius": "0.4em",
   "theme.bar.outer_spacing": "0em",
   "theme.bar.buttons.radius": "0.8em",
-  "bar.workspaces.show_icons": false
+  "bar.workspaces.show_icons": false,
+  "tear": true,
+  "theme.bar.buttons.windowtitle.spacing": "0.8em"
 }

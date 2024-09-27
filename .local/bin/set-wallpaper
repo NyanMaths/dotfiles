@@ -16,6 +16,7 @@ fi
 ln -sfr $1 ~/.cache/wal/current-wallpaper
 ln -sfr $1 ~/.mozilla/firefox/nyanmaths/chrome/assets/current-wallpaper
 
+pidof swww-daemon || swww-daemon
 swww img --transition-type grow --transition-fps 60 --transition-duration 0.5 $1
 
 wal -s -n -i $1
