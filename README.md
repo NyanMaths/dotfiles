@@ -47,6 +47,7 @@ Optional software :
   - [btop](https://github.com/aristocratos/btop) & [resources](https://github.com/nokyan/resources) : TUI & GUI system monitors
   - [grimblast-git](https://github.com/hyprwm/contrib)<sup>AUR</sup> : a really good screenshot utility for Hyprland
   - [kvantum](https://github.com/tsujan/Kvantum) & [kvantum-qt5](https://github.com/tsujan/Kvantum) : for unified Qt and GTK themes
+  - [fastfetch](https://github.com/fastfetch-cli/fastfetch) : to show off your rice
 
 
 <h1>Setup</h1>
