@@ -41,7 +41,7 @@ Old status bar :
 
 Optional software :
   - [greetd](https://github.com/kennylevinsen/greetd) : a minimalistic login manager
-  - [alacritty](https://github.com/alacritty/alacritty) : terminal emulator
+  - [kitty](https://github.com/kovidgoyal/kitty) : terminal emulator
   - [nautilus](https://gitlab.gnome.org/GNOME/nautilus) : file manager
   - [vesktop](https://github.com/Vencord/Vesktop) : best wayland discord client so far, but breaks ToS
   - [btop](https://github.com/aristocratos/btop) & [resources](https://github.com/nokyan/resources) : TUI & GUI system monitors
