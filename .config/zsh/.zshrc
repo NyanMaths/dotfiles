@@ -29,3 +29,5 @@ bindkey -e
 
 source $ZSH/oh-my-zsh.sh
 
+alias peg=ffmpeg
+
