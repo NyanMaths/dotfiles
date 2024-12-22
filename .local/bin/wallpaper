@@ -1,0 +1,62 @@
+#!/usr/bin/env sh
+
+
+# halp
+
+if [ $# -eq 1 ] && ([ $1 == "--help" ] || [ $1 == "-h" ])
+then
+  echo "This is a small script to generate a color palette or set a wallpaper easily."
+  echo "Any image format supported by ffmpeg should work, even animated : webp, avif, png..."
+  echo "Usage :"
+  echo "  wallpaper set /path/to/image.avif  -->  set wallpaper"
+  echo "  wallpaper gen /path/to/image.avif  -->  generate a color palette for your beautiful desktop"
+  exit 0
+fi
+
+
+# check if user smoked before typing
+
+if [ $# -ne 2 ]
+then
+  echo "Wrong arguments count, get usage with wallpaper --help"
+  exit 1
+fi
+
+if [ ! $1 == "set" ] && [ ! $1 == "gen" ]
+then
+  echo "Illegal operation : only set and gen operations are supported"
+  exit 1
+fi
+
+# check file existence
+if [ ! -f $2 ]
+then
+	echo "File $1 not found, aborting"
+	exit 1
+fi
+
+
+# actual functionalities
+
+if [ $1 == "set" ]
+then
+  # make sure cache folder exists
+  mkdir --parents $XDG_CACHE_HOME
+
+  # properly expose current wallpaper to firefox and others
+  ln -fsr $2 $XDG_CACHE_HOME/current-wallpaper
+  ln -fsr $2 ~/.mozilla/firefox/nyanmaths/chrome/assets/current-wallpaper
+
+  # actually set the wallpaper
+  pidof mpvpaper && pkill mpvpaper
+  mpvpaper '*' $2 -p -f -o "loop no-audio panscan=1.0"
+
+  exit 0
+fi
+
+if [ $1 == "gen" ]
+then
+  # simply generate colour palette
+  wal -s -n -i $2
+fi
+
