@@ -31,3 +31,7 @@ source $ZSH/oh-my-zsh.sh
 
 alias peg=ffmpeg
 
+# "get the f..k out of my home directory" section
+
+alias wget=wget --hsts-file="$XDG_DATA_HOME/wget-hsts"
+
