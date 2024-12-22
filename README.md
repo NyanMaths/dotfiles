@@ -55,8 +55,8 @@ Optional software :
 <h2>Login manager</h2>
 
 You should use autologin feature from your login manager as my config will lock your session automatically on startup because hyprlock is classier than any login manager's config known to me.
-<br />In that case,do not forget to automatically launch ```dbus-run-session Hyprland``` and not just ```Hyprland```, otherwise some things will break, especially screenshare.
-<br />Edit ```/etc/greetd/config.toml``` :
+<br>In that case,do not forget to automatically launch ```dbus-run-session Hyprland``` and not just ```Hyprland```, otherwise some things will break, especially screenshare.
+<br>Edit ```/etc/greetd/config.toml``` :
 ```
 [terminal]
 vt = 1
@@ -76,18 +76,16 @@ user = "greeter"
 ```
 <h2>Rice</h2>
 
-Please replace eDP-1 with your monitor's name from ```hyprctl monitors``` in ```.config/hypr/hyprpaper.conf```, thanks to a bug of Hyprland which prevents IPC from well-behaving for now.
-<br />You shall run set-wallpaper once in order to get your dynamic rice accordingly.
-<br />Before first launch of this script, your colours will be defaults and there will be no wallpaper. Just ```~/.local/bin/set-wallpaper /your/wallpaper/path.png```.
-<br />Yeah, only static images are supported by hyprlock at the moment, so forget about GIF, animated WEBP or AVIF. Just pray for animated wallpaper support.
-<br />Or pray so that I finally write a stupid shell script to extract the first frame of an animated wallpaper to make hyprlock happy, but I'm too lazy :3.
+<br>You shall run `wallpaper set /path/to/wallpaper.avif_goofy_aah` once in order to get your dynamic rice accordingly as you will get default colours upon first launch.
+<br>Yeah, only static images are supported by hyprlock at the moment, so forget about GIF, animated WEBP or AVIF. Just pray for animated wallpaper support.
+<br>Or pray so that I finally write a stupid shell script to extract the first frame of an animated wallpaper to make hyprlock happy, but I'm too lazy :3.
 
 <h2>Functionalities</h2>
 
 <h3>ZSH environment</h3>
 
 As I have to set them outside of Hyprland's config, here they are :
-<br />Edit ```/etc/zsh/zshenv``` :
+<br>Edit ```/etc/zsh/zshenv``` :
 ```
 export XDG_DATA_HOME="$HOME"/.local/share
 export XDG_CONFIG_HOME="$HOME"/.config
@@ -99,13 +97,13 @@ export ZDOTDIR="$XDG_CONFIG_HOME"/zsh
 <h3>Touchpad and keyboard toggles</h3>
 
 I made two scripts for toggling integrated touchpad and keyboard for laptops, but their name can differ from one computer to another.
-<br />That is why you should ```hyprctl devices```, look for your integrated devices names and replace ```at-translated-set-2-keyboard``` and ```elan1203:00-04f3:307a-touchpad``` with yours in ```.config/hypr/scripts/keyboard-toggle.sh```, ```.config/hypr/scripts/touchpad-toggle.sh``` and ```.config/hypr/input.conf```.
-<br />That way, you will be able to easily access these controls in wabar and by keybinds (```super+shift+k``` and ```xf86touchpadtoggle```)
+<br>That is why you should ```hyprctl devices```, look for your integrated devices names and replace ```at-translated-set-2-keyboard``` and ```elan1203:00-04f3:307a-touchpad``` with yours in ```.config/hypr/scripts/keyboard-toggle.sh```, ```.config/hypr/scripts/touchpad-toggle.sh``` and ```.config/hypr/input.conf```.
+<br>That way, you will be able to easily access these controls in wabar and by keybinds (```super+shift+k``` and ```xf86touchpadtoggle```)
 
 <h3>The green one</h3>
 
 I set up hardware acceleration with nvidia but disabled rendering though it, because my monitor is not wired to my dGPU, so you might want to tweak these settings, in that case, get to ![the Hyprland wiki](https://wiki.hyprland.org/Nvidia) for setting up this despicable thing. I left a config file for this, but be careful as I do not update it often : ```.config/hypr/nyavidia.conf```.
-<br />For people who does not have nvidia-smi, wabar should have missing parts : this is because the GPU temperature section cannot be displayed. Well, just remove ```custom-gpu``` and ```custom-vram``` modules and round corners in ```.config/waybar/``` to make it look pretty again.
+<br>For people who does not have nvidia-smi, wabar should have missing parts : this is because the GPU temperature section cannot be displayed. Well, just remove ```custom-gpu``` and ```custom-vram``` modules and round corners in ```.config/waybar/``` to make it look pretty again.
 
 <h3>Turbo boost toggle</h3>
 
@@ -115,4 +113,5 @@ This one is only supposed to work for intel CPUs using pstate driver, without an
 <h2> Credits </h2>
 
 Hyprland : https://github.com/hyprwm/Hyprland
-<br />HyprPanel : https://github.com/Jas-SinghFSU/HyprPanel
+<br>HyprPanel : https://github.com/Jas-SinghFSU/HyprPanel
+
