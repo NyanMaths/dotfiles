@@ -12,7 +12,7 @@ I am currently fighting against those annoying config, cache and data directorie
 Almost required software :
   - [rofi-wayland](https://github.com/lbonn/rofi) : app launcher
   - [hyprlock](https://github.com/hyprwm/hyprlock) : stylish lock screen
-  - [swww](https://github.com/LGFae/swww) : yes
+  - [mpvpaper](https://github.com/GhostNaN/mpvpaper) : for wallpaper support
   - [wl-clip-persist](https://github.com/Linus789/wl-clip-persist) and [wl-clipboard](https://github.com/bugaevc/wl-clipboard) : finally a working clipboard manager
   - [brightnessctl](https://github.com/Hummer12007/brightnessctl) : brightness control
   - [playerctl](https://github.com/altdesktop/playerctl) : media player control
