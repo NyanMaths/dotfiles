@@ -48,8 +48,8 @@ then
   ln -fsr $2 ~/.mozilla/firefox/nyanmaths/chrome/assets/current-wallpaper
 
   # actually set the wallpaper
-  pidof mpvpaper && pkill mpvpaper
-  mpvpaper '*' $2 -p -f -o "loop no-audio panscan=1.0"
+  pkill mpvpaper
+  mpvpaper '*' $2 -p -f -o "loop no-audio panscan=1.0 profile=sw-fast"
 
   exit 0
 fi
