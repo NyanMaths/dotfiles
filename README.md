@@ -21,11 +21,7 @@ Almost required software :
   - [xdg-desktop-portal-gtk](https://github.com/flatpak/xdg-desktop-portal-gtk) : portal for file picker
 
 Status bar :
-  - [ags](https://github.com/Aylur/ags) : Aylur's GTK shell
-  - [pipewire](https://gitlab.freedesktop.org/pipewire/pipewire), [bluez](https://github.com/bluez/bluez), [bluez-utils](https://github.com/bluez/bluez) : basic bluetooth support
-  - [bun](https://github.com/oven-sh/bun)<sup>AUR</sup> : some JS fuckery
-  - [dart-sass](https://github.com/sass/sass) : some CSS fuckery
-  - [gnome-bluetooth-3.0](https://gitlab.gnome.org/GNOME/gnome-bluetooth) : for bluetooth applet
+  - [ags-hyprpanel-git](https://github.com/Jas-SinghFSU/HyprPanel)<sup>AUR</sup> : Hyprpanel (a really nice AGS bar)
   - [hyprpicker](https://github.com/hyprwm/hyprpicker) : color picker for Hyprland
   - [optional] [python-gpustat](https://github.com/wookayin/gpustat)<sup>AUR</sup> : get nvidia GPU usage on dashboard
   - [optional] [matugen](https://github.com/InioX/matugen)<sup>AUR</sup> : a palette generator
@@ -51,6 +47,11 @@ Optional software :
 
 
 <h1>Setup</h1>
+
+I use Hypridle to manage session events, you can enable it with :
+```sh
+systemctl enable --user --now hypridle.service
+```
 
 <h2>Login manager</h2>
 

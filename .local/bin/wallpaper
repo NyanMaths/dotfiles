@@ -47,6 +47,9 @@ then
   ln -fsr $2 $XDG_CACHE_HOME/current-wallpaper
   ln -fsr $2 ~/.mozilla/firefox/nyanmaths/chrome/assets/current-wallpaper
 
+  # generate colour palette
+  wal -s -n -i $2
+
   # actually set the wallpaper
   pkill mpvpaper
   mpvpaper '*' $2 -p -f -o "loop no-audio panscan=1.0 profile=sw-fast"
