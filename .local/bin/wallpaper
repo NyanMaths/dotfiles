@@ -48,7 +48,7 @@ then
   ln -fsr $2 ~/.mozilla/firefox/nyanmaths/chrome/assets/current-wallpaper
 
   # generate colour palette
-  wal -s -n -i $2
+  matugen image $2
 
   # actually set the wallpaper
   pkill mpvpaper
@@ -60,6 +60,6 @@ fi
 if [ $1 == "gen" ]
 then
   # simply generate colour palette
-  wal -s -n -i $2
+  matugen image $2
 fi
 

@@ -16,7 +16,7 @@ Almost required software :
   - [wl-clip-persist](https://github.com/Linus789/wl-clip-persist) and [wl-clipboard](https://github.com/bugaevc/wl-clipboard) : finally a working clipboard manager
   - [brightnessctl](https://github.com/Hummer12007/brightnessctl) : brightness control
   - [playerctl](https://github.com/altdesktop/playerctl) : media player control
-  - [python-pywal](https://github.com/dylanaraps/pywal) : automatic colours for Hyprland (archived, as neofetch...shiet)
+  - [matugen](https://github.com/InioX/matugen) : automatic colours for Hyprland
   - [xdg-desktop-portal-hyprland](https://github.com/hyprwm/xdg-desktop-portal-hyprland) : portal for screensharing
   - [xdg-desktop-portal-gtk](https://github.com/flatpak/xdg-desktop-portal-gtk) : portal for file picker
 

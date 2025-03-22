@@ -110,5 +110,7 @@
   "theme.bar.opacity": 100,
   "theme.bar.shadow": "0px 0px 0px 0px #16161e",
   "bar.launcher.icon": "󰣇",
-  "bar.launcher.autoDetectIcon": false
+  "bar.launcher.autoDetectIcon": false,
+  "menus.dashboard.powermenu.shutdown": "systemctl poweroff",
+  "hyprpanel.restartAgs": false
 }
