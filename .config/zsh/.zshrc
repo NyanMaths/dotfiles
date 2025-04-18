@@ -10,8 +10,8 @@ export PATH=$HOME/.local/bin:/usr/local/bin:$PATH
 
 
 HISTFILE=$XDG_STATE_HOME/zsh/history
-HISTSIZE=100000
-SAVEHIST=100000
+HISTSIZE=1000000
+SAVEHIST=1000000
 
 ZSH_CUSTOM=$XDG_DATA_HOME/zsh
 ZSH=$XDG_DATA_HOME/zsh/oh-my-zsh
@@ -38,6 +38,7 @@ alias wget=wget --hsts-file="$XDG_DATA_HOME/wget-hsts"
 alias adb='HOME="$XDG_DATA_HOME"/android adb'
 alias mvn=mvn -gs $XDG_CONFIG_HOME/maven/settings.xml
 alias sbt=sbt -ivy $XDG_DATA_HOME/ivy2 -sbt-dir $XDG_DATA_HOME/sbt
+alias nvim=micro
 
 
 

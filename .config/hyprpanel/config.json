@@ -112,5 +112,6 @@
   "bar.launcher.icon": "󰣇",
   "bar.launcher.autoDetectIcon": false,
   "menus.dashboard.powermenu.shutdown": "systemctl poweroff",
-  "hyprpanel.restartAgs": false
+  "hyprpanel.restartAgs": false,
+  "menus.transition": "crossfade"
 }

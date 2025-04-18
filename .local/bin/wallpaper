@@ -51,8 +51,13 @@ then
   matugen image $2
 
   # actually set the wallpaper
-  pkill mpvpaper
-  mpvpaper '*' $2 -p -f -o "loop no-audio panscan=1.0 profile=sw-fast"
+  #pkill mpvpaper
+  if ! pidof mpvpaper
+  then
+    mpvpaper -o "loop no-audio panscan=1.0 profile=sw-fast input-ipc-server=/tmp/mpvpaper-hyprland-socket" '*' -p -f $2
+  else
+    echo "loadfile $2" | socat - /tmp/mpvpaper-hyprland-socket
+  fi
 
   exit 0
 fi
