@@ -13,6 +13,7 @@ Almost required software :
   - [rofi-wayland](https://github.com/lbonn/rofi) : app launcher
   - [hyprlock](https://github.com/hyprwm/hyprlock) : stylish lock screen
   - [mpvpaper](https://github.com/GhostNaN/mpvpaper) : for wallpaper support
+  - [socat](http://www.dest-unreach.org/socat) : for proper wallpaper switching with MPV
   - [wl-clip-persist](https://github.com/Linus789/wl-clip-persist) and [wl-clipboard](https://github.com/bugaevc/wl-clipboard) : finally a working clipboard manager
   - [brightnessctl](https://github.com/Hummer12007/brightnessctl) : brightness control
   - [playerctl](https://github.com/altdesktop/playerctl) : media player control
