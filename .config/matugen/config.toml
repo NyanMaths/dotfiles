@@ -2,7 +2,10 @@
 
 
 [templates.hyprland]
-input_path = '~/.config/matugen/hyprland-colors.conf'
+input_path = 'hyprland-colors.conf'
 output_path = '~/.cache/matugen/hyprland-colors.conf'
 #post_hook = 'hyprctl reload'
 
+[templates.rofi]
+input_path = 'rofi-colors.rasi'
+output_path = '~/.cache/matugen/rofi-colors.rasi'
