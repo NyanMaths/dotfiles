@@ -21,20 +21,20 @@ Almost required software :
   - [xdg-desktop-portal-hyprland](https://github.com/hyprwm/xdg-desktop-portal-hyprland) : portal for screensharing
   - [xdg-desktop-portal-gtk](https://github.com/flatpak/xdg-desktop-portal-gtk) : portal for file picker
 
-Status bar :
-  - [ags-hyprpanel-git](https://github.com/Jas-SinghFSU/HyprPanel)<sup>AUR</sup> : Hyprpanel (a really nice AGS bar)
-  - [hyprpicker](https://github.com/hyprwm/hyprpicker) : color picker for Hyprland
-  - [optional] [python-gpustat](https://github.com/wookayin/gpustat)<sup>AUR</sup> : get nvidia GPU usage on dashboard
-  - [optional] [matugen](https://github.com/InioX/matugen)<sup>AUR</sup> : a palette generator
-  - [optional] [gpu-screen-recorder](https://git.dec05eba.com/gpu-screen-recorder)<sup>AUR</sup> : maybe this can work, but not for me
-
-Old status bar :
+Status bar (Wabar) :
   - [waybar](https://github.com/Alexays/Waybar) : wabar :)
   - [wlogout](https://github.com/ArtsyMacaw/wlogout) : session menu
   - [mako](https://github.com/emersion/mako) : notifications daemon
   - [blueman](https://github.com/blueman-project/blueman)
   - [network-manager-applet](https://gitlab.gnome.org/GNOME/network-manager-applet)
   - [gawk](https://git.savannah.gnu.org/cgit/gawk.git) : arithmetics for VRAM usage query
+
+Status bar (Hyprpanel) :
+  - [ags-hyprpanel-git](https://github.com/Jas-SinghFSU/HyprPanel)<sup>AUR</sup> : Hyprpanel (a really nice AGS bar)
+  - [hyprpicker](https://github.com/hyprwm/hyprpicker) : color picker for Hyprland
+  - [optional] [python-gpustat](https://github.com/wookayin/gpustat)<sup>AUR</sup> : get nvidia GPU usage on dashboard
+  - [optional] [matugen](https://github.com/InioX/matugen)<sup>AUR</sup> : a palette generator
+  - [optional] [gpu-screen-recorder](https://git.dec05eba.com/gpu-screen-recorder)<sup>AUR</sup> : maybe this can work, but not for me
 
 Optional software :
   - [greetd](https://github.com/kennylevinsen/greetd) : a minimalistic login manager
@@ -115,5 +115,6 @@ This one is only supposed to work for intel CPUs using pstate driver, without an
 <h2> Credits </h2>
 
 Hyprland : https://github.com/hyprwm/Hyprland
+<br>Waybar : https://github.com/Alexays/Waybar
 <br>HyprPanel : https://github.com/Jas-SinghFSU/HyprPanel
-
+<br>NVIDIA for making me wake up each morning with more fixes to do on my laptop

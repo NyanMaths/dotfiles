@@ -15,11 +15,15 @@
 		"custom/gpu",
 		"network"
 	],
+	"modules-center":
+	[
+		"hyprland/workspaces"
+	],
 	"modules-right":
 	[
 		"custom/keyboard",
 		"custom/touchpad",
-		"custom/boost",
+		"power-profiles-daemon",
 		"pulseaudio",
 		"backlight",
 		"upower",
@@ -81,18 +85,41 @@
 		"tooltip": false
 	},
 
-	/* middle separation */
+	/* left separation */
+
+	"hyprland/workspaces":
+	{
+		"format": "{icon}",
+		"on-click": "activate",
+		"format-icons":
+		{
+			"urgent": "",
+			"active": "",
+			"default": ""
+		},
+		"persistent-workspaces":
+		{
+			"1": [],
+			"2": [],
+			"3": [],
+			"4": [],
+			"5": []
+		},
+		"sort-by-number": true
+	},
+
+	/* right separation */
 
 	"custom/keyboard":
 	{
 		"format": "󰌌",
-		"on-click": "~/.local/bin/keyboard-toggle.sh",
+		"on-click": "~/.local/bin/device-toggle.sh at-translated-set-2-keyboard",
 		"tooltip-format": "toggle keyboard"
 	},
 	"custom/touchpad":
 	{
 		"format": "󰍽",
-		"on-click": "~/.local/bin/touchpad-toggle.sh",
+		"on-click": "~/.local/bin/device-toggle.sh uniw0001:00-093a:0255-touchpad",
 		"tooltip-format": "toggle touchpad"
 	},
 	"custom/boost":
@@ -101,7 +128,19 @@
 		"on-click": "~/.local/bin/toggle-pstate-boost.sh",
 		"tooltip-format": "toggle CPU boost"
 	},
-	  
+
+	"power-profiles-daemon": {
+	  "format": "{icon}",
+	  "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+	  "tooltip": true,
+	  "format-icons": {
+	    "default": "",
+	    "performance": "",
+	    "balanced": "",
+	    "power-saver": ""
+	  }
+	},
+
 	"pulseaudio":
 	{
 		"format": "{icon} {volume}",
@@ -133,8 +172,8 @@
 			"warning": 80,
 			"critical": 90
 		},
-		"on-scroll-down": "brightnessctl -q set 1%-",
-		"on-scroll-up": "brightnessctl -q set 1%+",
+		"on-scroll-down": "brightnessctl set 1%-",
+		"on-scroll-up": "brightnessctl set 1%+",
 		"tooltip": false
 	},
 	"upower":

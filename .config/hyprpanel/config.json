@@ -6,7 +6,7 @@
   "tear": true,
   "bar.workspaces.showWsIcons": false,
   "bar.workspaces.show_icons": false,
-  "menus.dashboard.powermenu.avatar.image": "/home/nyanmaths/Downloads/olivier_ridoux.png",
+  "menus.dashboard.powermenu.avatar.image": "/home/nyanmaths/Pictures/olivier_ridoux.png",
   "menus.dashboard.stats.enable_gpu": false,
   "menus.dashboard.controls.enabled": false,
   "menus.dashboard.shortcuts.left.shortcut1.command": "prime-run firefox",
@@ -31,5 +31,9 @@
   "bar.network.truncation": false,
   "bar.scrollSpeed": 3,
   "bar.volume.scrollDown": "hyprpanel vol -3",
-  "bar.volume.scrollUp": "hyprpanel vol +3"
+  "bar.volume.scrollUp": "hyprpanel vol +3",
+  "bar.battery.scrollUp": "brightnessctl set 1%+",
+  "bar.battery.scrollDown": "brightnessctl set 1%-",
+  "theme.bar.buttons.modules.ram.enableBorder": false,
+  "bar.customModules.cpuTemp.unit": "metric"
 }

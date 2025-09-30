@@ -72,7 +72,7 @@
         },
         {
             "type": "gpu",
-            "format": "{3}",
+            "format": "{2}",
             "key": "   GPU",
             "keyColor": "magenta"
         },

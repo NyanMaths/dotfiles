@@ -3,14 +3,14 @@
 
 # halp
 
-if [ $# -eq 1 ] && ([ $1 == "--help" ] || [ $1 == "-h" ])
+if [ $# -eq 1 ] && ([ $1 == "--help" ] || [ $1 == "-h" ] || [ $1 == "help" ])
 then
-  echo "This is a small script to generate a color palette or set a wallpaper easily."
-  echo "Any image format supported by ffmpeg should work, even animated : webp, avif, png..."
-  echo "Usage :"
-  echo "  wallpaper set /path/to/image.avif  -->  set wallpaper"
-  echo "  wallpaper gen /path/to/image.avif  -->  generate a color palette for your beautiful desktop"
-  exit 0
+	echo "This is a small script to generate a color palette or set a wallpaper easily."
+	echo "Any image format supported by ffmpeg should work, even animated : webp, avif, png..."
+	echo "Usage :"
+	echo "  wallpaper set /path/to/image.avif  -->  set wallpaper"
+	echo "  wallpaper gen /path/to/image.avif  -->  generate a color palette for your beautiful desktop"
+	exit 0
 fi
 
 
@@ -18,14 +18,14 @@ fi
 
 if [ $# -ne 2 ]
 then
-  echo "Wrong arguments count, get usage with wallpaper --help"
-  exit 1
+	echo "Wrong arguments count, get usage with wallpaper --help"
+	exit 1
 fi
 
 if [ ! $1 == "set" ] && [ ! $1 == "gen" ]
 then
-  echo "Illegal operation : only set and gen operations are supported"
-  exit 1
+	echo "Illegal operation : only set and gen operations are supported"
+	exit 1
 fi
 
 # check file existence
@@ -40,31 +40,32 @@ fi
 
 if [ $1 == "set" ]
 then
-  # make sure cache folder exists
-  mkdir --parents $XDG_CACHE_HOME
+	# make sure cache folder exists
+	mkdir --parents $XDG_CACHE_HOME
 
-  # properly expose current wallpaper to firefox and others
-  ln -fsr $2 $XDG_CACHE_HOME/current-wallpaper
-  ln -fsr $2 ~/.mozilla/firefox/nyanmaths/chrome/assets/current-wallpaper
+	# properly expose current wallpaper to firefox and others
+	ln -fsr $2 $XDG_CACHE_HOME/current-wallpaper
+	#pkexec ln -fsr $2 /usr/local/etc/hyprgreet/current-wallpaper
+	ln -fsr $2 ~/.mozilla/firefox/nyanmaths/chrome/assets/current-wallpaper
 
-  # generate colour palette
-  matugen image $2
+	# generate colour palette
+	matugen image $2
 
-  # actually set the wallpaper
-  #pkill mpvpaper
-  if ! pidof mpvpaper
-  then
-    mpvpaper -o "loop no-audio panscan=1.0 profile=sw-fast input-ipc-server=/tmp/mpvpaper-hyprland-socket" '*' -p -f $2
-  else
-    echo "loadfile $2" | socat - /tmp/mpvpaper-hyprland-socket
-  fi
+	# actually set the wallpaper
+	#pkill mpvpaper
+	if ! pidof mpvpaper
+	then
+		mpvpaper -o "loop no-audio panscan=1.0 profile=sw-fast input-ipc-server=/tmp/mpvpaper-hyprland-socket" '*' -p -f $2
+	else
+		echo "loadfile $2" | socat - /tmp/mpvpaper-hyprland-socket
+	fi
 
-  exit 0
+	exit 0
 fi
 
 if [ $1 == "gen" ]
 then
-  # simply generate colour palette
-  matugen image $2
+	# simply generate colour palette
+	matugen image $2
 fi
 
