@@ -14,13 +14,18 @@ then
 fi
 
 
-if ! [ -f $XDG_CONFIG_HOME/hypr/$1.conf ]
+if ! [ -d $XDG_CONFIG_HOME/hypr/devices ]
 then
-	echo -e "device {\n\tname = $1\n\tenabled = false\n}" > $XDG_CONFIG_HOME/hypr/$1.conf
-	echo -e "\nsource = $XDG_CONFIG_HOME/hypr/$1.conf" >> $XDG_CONFIG_HOME/hypr/custom.conf
-elif grep "enabled = true" $XDG_CONFIG_HOME/hypr/$1.conf >> /dev/null
+	mkdir -p $XDG_CONFIG_HOME/hypr/devices
+fi
+
+if ! [ -f $XDG_CONFIG_HOME/hypr/devices/$1.conf ]
 then
-	echo -e "device {\n\tname = $1\n\tenabled = false\n}" > $XDG_CONFIG_HOME/hypr/$1.conf
+	echo -e "device {\n\tname = $1\n\tenabled = false\n}" > $XDG_CONFIG_HOME/hypr/devices/$1.conf
+	echo -e "\nsource = $XDG_CONFIG_HOME/hypr/devices/$1.conf" >> $XDG_CONFIG_HOME/hypr/custom.conf
+elif grep "enabled = true" $XDG_CONFIG_HOME/hypr/devices/$1.conf >> /dev/null
+then
+	echo -e "device {\n\tname = $1\n\tenabled = false\n}" > $XDG_CONFIG_HOME/hypr/devices/$1.conf
 else
-	echo -e "device {\n\tname = $1\n\tenabled = true\n}" > $XDG_CONFIG_HOME/hypr/$1.conf
+	echo -e "device {\n\tname = $1\n\tenabled = true\n}" > $XDG_CONFIG_HOME/hypr/devices/$1.conf
 fi
