@@ -69,4 +69,4 @@ export MICRO_TRUECOLOR="1"
 # ################  Start desktop  ################
 
 
-dbus-run-session "$@"
+exec "$@"
