@@ -57,14 +57,14 @@ systemctl enable --user --now hypridle.service
 <h2>Login manager</h2>
 
 You should use autologin feature from your login manager as my config will lock your session automatically on startup because hyprlock is classier than any login manager's config known to me.
-<br>In that case,do not forget to automatically launch ```dbus-run-session Hyprland``` and not just ```Hyprland```, otherwise some things will break, especially screenshare.
+<br>In that case,do not forget to automatically launch ```dbus-run-session start-hyprland``` and not just ```start-hyprland```, otherwise some things will break, especially screenshare.
 <br>Edit ```/etc/greetd/config.toml``` :
 ```
 [terminal]
 vt = 1
 
 [initial_session]
-command = "dbus-run-session Hyprland"
+command = "dbus-run-session start-hyprland"
 user = "USERNAME"
 
 [default_session]
@@ -73,7 +73,7 @@ user = "greeter"
 
 # it can restart Hyprland automatically if you just want to reload it when logging out, in that case use this one :
 #[default_session]
-#command = "dbus-run-session Hyprland"
+#command = "dbus-run-session start-hyprland"
 #user = "USERNAME"
 ```
 <h2>Rice</h2>
