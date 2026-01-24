@@ -40,3 +40,12 @@ alias mvn=mvn -gs $XDG_CONFIG_HOME/maven/settings.xml
 alias sbt=sbt -ivy $XDG_DATA_HOME/ivy2 -sbt-dir $XDG_DATA_HOME/sbt
 alias yay=paru
 
+
+
+# BEGIN opam configuration
+# This is useful if you're using opam as it adds:
+#   - the correct directories to the PATH
+#   - auto-completion for the opam binary
+# This section can be safely removed at any time if needed.
+[[ ! -r '/home/nyanmaths/.local/share/opam/opam-init/init.zsh' ]] || source '/home/nyanmaths/.local/share/opam/opam-init/init.zsh' > /dev/null 2> /dev/null
+# END opam configuration
