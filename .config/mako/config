@@ -1,0 +1,12 @@
+background-color=#24273a
+text-color=#cad3f5
+border-color=#b7bdf8
+progress-color=over #363a4f
+
+border-radius=10
+
+default-timeout=3500
+
+[urgency=high]
+border-color=#f5a97f
+
