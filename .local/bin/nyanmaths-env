@@ -58,6 +58,7 @@ export PYTHON_HISTORY="$XDG_STATE_HOME/python/history"
 export PSQL_HISTORY="$XDG_STATE_HOME/psql_history"
 export _JAVA_OPTIONS="-Djava.util.prefs.userRoot=$XDG_CONFIG_HOME/java"
 export ANDROID_USER_HOME="$XDG_DATA_HOME/android"
+export RENPY_PATH_TO_SAVES="$XDG_DATA_HOME"
 
 
 # ################  Random things  ################
