@@ -1,10 +1,10 @@
 # dotfiles
 Behold, my dynamic Hyprland rice !
-![image](https://github.com/user-attachments/assets/22b40d8c-1827-4035-a3eb-8cfecf222928)
+![image](screenshots/general-style.jxm)
 Rofi theme :
-![image](https://github.com/NyanMaths/dotfiles/assets/64662422/5194d642-b51a-47a6-8d6f-b13a3b7c1344)
+![image](screenshots/rofi.jxl)
 Wlogout theme (for waybar) :
-![image](https://github.com/NyanMaths/dotfiles/assets/64662422/aaa2aa21-5b5d-4d18-aa34-f16af59273e4)
+![image](screenshots/wlogout.jxl)
 
 I am currently fighting against those annoying config, cache and data directories inside of my home folder, so there is a bunch of environment set for this, you may yeet this without any problem.
 

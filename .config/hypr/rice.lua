@@ -110,6 +110,7 @@ hl.layer_rule({
 	},
 	blur = true,
 	xray = false,
+	
 })
 
 -- uWu
