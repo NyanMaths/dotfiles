@@ -1,6 +1,6 @@
 # dotfiles
 Behold, my dynamic Hyprland rice !
-![image](screenshots/general-style.jxm)
+![image](screenshots/general-style.jxl)
 Rofi theme :
 ![image](screenshots/rofi.jxl)
 Wlogout theme (for waybar) :
