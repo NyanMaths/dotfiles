@@ -1,10 +1,10 @@
 # dotfiles
 Behold, my dynamic Hyprland rice !
-![image](screenshots/general-style.jxl)
+![image](screenshots/general-style.webp)
 Rofi theme :
-![image](screenshots/rofi.jxl)
+![image](screenshots/rofi.webp)
 Wlogout theme (for waybar) :
-![image](screenshots/wlogout.jxl)
+![image](screenshots/wlogout.webp)
 
 I am currently fighting against those annoying config, cache and data directories inside of my home folder, so there is a bunch of environment set for this, you may yeet this without any problem.
 
