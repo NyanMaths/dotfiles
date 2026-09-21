@@ -2,8 +2,8 @@
 
 
 [templates.hyprland]
-input_path = 'hyprland-colors.conf'
-output_path = '~/.cache/matugen/hyprland-colors.conf'
+input_path = 'hyprland-colors.lua'
+output_path = '~/.cache/matugen/hyprland-colors.lua'
 #post_hook = 'hyprctl reload'
 
 [templates.rofi]

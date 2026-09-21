@@ -14,18 +14,17 @@ then
 fi
 
 
-if ! [ -d $XDG_CONFIG_HOME/hypr/devices ]
+if ! [ -d $XDG_CACHE_HOME/hyprland/disabled-devices ]
 then
-	mkdir -p $XDG_CONFIG_HOME/hypr/devices
+	mkdir -p $XDG_CACHE_HOME/hyprland/disabled-devices
 fi
 
-if ! [ -f $XDG_CONFIG_HOME/hypr/devices/$1.conf ]
-then
-	echo -e "device {\n\tname = $1\n\tenabled = false\n}" > $XDG_CONFIG_HOME/hypr/devices/$1.conf
-	echo -e "\nsource = $XDG_CONFIG_HOME/hypr/devices/$1.conf" >> $XDG_CONFIG_HOME/hypr/custom.conf
-elif grep "enabled = true" $XDG_CONFIG_HOME/hypr/devices/$1.conf >> /dev/null
-then
-	echo -e "device {\n\tname = $1\n\tenabled = false\n}" > $XDG_CONFIG_HOME/hypr/devices/$1.conf
+status_file="$XDG_CACHE_HOME/hyprland/disabled-devices/$1"
+
+if [ -f "$status_file" ]; then
+    rm "$status_file"
+    hyprctl eval "hl.device({ name=\"$1\", enabled=true })"
 else
-	echo -e "device {\n\tname = $1\n\tenabled = true\n}" > $XDG_CONFIG_HOME/hypr/devices/$1.conf
+    touch "$status_file"
+    hyprctl eval "hl.device({ name=\"$1\", enabled=false })"
 fi

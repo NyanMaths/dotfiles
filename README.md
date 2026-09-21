@@ -117,4 +117,5 @@ This one is only supposed to work for intel CPUs using pstate driver, without an
 Hyprland : https://github.com/hyprwm/Hyprland
 <br>Waybar : https://github.com/Alexays/Waybar
 <br>HyprPanel : https://github.com/Jas-SinghFSU/HyprPanel
+<br>Hyprlang2Lua (config rewrite was much quicker with this rool) : https://github.com/EIonTusk/hyprlang2lua
 <br>NVIDIA for making me wake up each morning with more fixes to do on my laptop
