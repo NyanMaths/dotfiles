@@ -70,8 +70,7 @@ hl.config({
 		enable_anr_dialog = false,
 	},
 	render = {
-		cm_enabled = true,
-		direct_scanout = 0,
+		direct_scanout = 1,
 		send_content_type = false,
 		new_render_scheduling = true,
 	},
